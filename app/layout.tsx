@@ -1,13 +1,15 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import Developing from "@/components/Developing";
+import { ThemeContextProvider } from "@/contexts/ThemeContext";
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Mentaicode | Ike Lim",
   description: "Sharing my skills and knowledge with others.",
 };
+
+const developing = false;
 
 export default function RootLayout({
   children,
@@ -16,7 +18,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <ThemeContextProvider>
+        {developing ? (
+          <Developing />
+        ) : (
+          <body>
+            <Navbar />
+            {children}
+          </body>
+        )}
+      </ThemeContextProvider>
     </html>
   );
 }
