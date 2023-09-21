@@ -1,27 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Tilt+Warp&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --font-default: "Merriweather Sans", sans-serif;
+  --font-warp: Tilt Warp, cursive;
+
+  --primary: #f7a634;
+  --secondary: #ffebd1;
+  --border: #fff7ed;
+
+  --custom-black: #191919;
+  --custom-white: #efefef;
+  --dark-grey: #63605c;
+  --light-grey: #bab6b0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  font-family: var(--font-default);
+}
+
+h1 {
+  font-size: 30pt;
+  font-weight: 800;
+  line-height: 110%;
+}
+
+h2 {
+  font-size: 26pt;
+  line-height: 115%;
+}
+
+h3 {
+  font-size: 21pt;
+  line-height: 120%;
+}
+
+h4 {
+  font-size: 19pt;
+  line-height: 130%;
+}
+
+h5 {
+  font-size: 16pt;
+  line-height: 140%;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--custom-white);
+}
+
+.header {
+  font-size: 46pt;
+  line-height: 110%;
+  font-family: var(--font-warp);
+  letter-spacing: -1px;
+  font-weight: 400;
+  background-image: linear-gradient(
+    to bottom,
+    var(--secondary) 0%,
+    var(--primary) 35%,
+    #ff7575 80%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
