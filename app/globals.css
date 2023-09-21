@@ -7,12 +7,12 @@
   --font-default: "Merriweather Sans", sans-serif;
   --font-warp: Tilt Warp, cursive;
 
-  --primary: #f7a634;
+  --primary: #f09921;
   --secondary: #ffebd1;
   --border: #fff7ed;
 
   --custom-black: #191919;
-  --custom-white: #efefef;
+  --custom-white: #f2f2f2;
   --dark-grey: #63605c;
   --light-grey: #bab6b0;
 }
@@ -51,7 +51,7 @@ body {
   background-color: var(--custom-white);
 }
 
-.header {
+.header-dark {
   font-size: 46pt;
   line-height: 110%;
   font-family: var(--font-warp);
@@ -61,6 +61,23 @@ body {
     to bottom,
     var(--secondary) 0%,
     var(--primary) 35%,
+    #ff7575 80%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header-light {
+  font-size: 46pt;
+  line-height: 110%;
+  font-family: var(--font-warp);
+  letter-spacing: -1px;
+  font-weight: 400;
+  background-image: linear-gradient(
+    to bottom,
+
+    var(--primary) 15%,
     #ff7575 80%
   );
   background-clip: text;
