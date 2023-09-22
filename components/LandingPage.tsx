@@ -9,14 +9,6 @@ type LandingPageProps = {
 export default function LandingPage({ children }: LandingPageProps) {
   const { theme } = useThemeContext();
   return (
-    <div
-      className={`grid place-items-center min-h-screen bg-gradient-to-br ${
-        LightCheck()
-          ? "from-custom-white to-border"
-          : "from-custom-black to-custom-black"
-      }`}
-    >
-      {children}
-    </div>
+    <div className={`grid place-items-center min-h-[85vh]`}>{children}</div>
   );
 }
