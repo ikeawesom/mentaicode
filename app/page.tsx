@@ -13,7 +13,6 @@ export default function Home() {
           <HeroButtons />
         </Hero>
       </LandingPage>
-      <div className="w-full h-screen"></div>
     </PageWrapper>
   );
 }

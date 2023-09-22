@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ANIM_DELAY_FACTOR, INITIAL_ANIM_TIME } from "@/constants.js";
 import GetStartedButton from "./buttons/GetStartedButton";
 import SecondaryButton from "./buttons/SecondaryButton";
+import DivFadeUp from "./animations/DivFadeUp";
 
 type HeroType = {
   header: string;
@@ -16,16 +17,7 @@ export default function Hero({ header, subtext, children }: HeroType) {
   const { theme } = useThemeContext();
   return (
     <div className="flex flex-col gap-8 items-center justify-center w-full p-8 duration-200">
-      <motion.div
-        initial={{ opacity: 0, y: -10 }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: { duration: INITIAL_ANIM_TIME, ease: "easeInOut" },
-        }}
-        viewport={{ once: true }}
-        className="flex flex-col gap-4 text-center w-full justify-center items-center"
-      >
+      <DivFadeUp className="flex flex-col gap-4 text-center w-full justify-center items-center">
         <h1
           className={`${
             LightCheck() ? "header-light drop-shadow-md" : "header-dark"
@@ -52,7 +44,7 @@ export default function Hero({ header, subtext, children }: HeroType) {
         >
           {subtext}
         </motion.p>
-      </motion.div>
+      </DivFadeUp>
       {children}
     </div>
   );
@@ -60,18 +52,9 @@ export default function Hero({ header, subtext, children }: HeroType) {
 
 export function HeroButtons() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -10 }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-        transition: {
-          duration: INITIAL_ANIM_TIME,
-          ease: "easeInOut",
-          delay: ANIM_DELAY_FACTOR * 2,
-        },
-      }}
+    <DivFadeUp
       className="flex items-center justify-center max-[420px]:flex-col max-[420px]:gap-y-2"
+      delay={2}
     >
       <GetStartedButton />
       <SecondaryButton
@@ -79,6 +62,6 @@ export function HeroButtons() {
         text="View my work"
         style="hover:text-primary duration-150 transition-colors"
       />
-    </motion.div>
+    </DivFadeUp>
   );
 }
