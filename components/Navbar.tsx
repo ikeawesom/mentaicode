@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { INITIAL_ANIM_TIME, LOGO_WIDTH, LOGO_WORD_WIDTH } from "@/constants.js";
 import NavigationLinks from "./NavigationLinks";
 import { MenuIcon } from "./ThemeIcons";
+import DivFadeUp from "./animations/DivFadeUp";
 
 export default function Navbar() {
   const [navVisible, setNavVisibility] = useState(false);
@@ -18,16 +19,7 @@ export default function Navbar() {
         LightCheck() ? "bg-custom-white" : "bg-custom-black"
       }`}
     >
-      <motion.div
-        initial={{ opacity: 0, y: -10 }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: { duration: INITIAL_ANIM_TIME, ease: "easeInOut" },
-        }}
-        viewport={{ once: true }}
-        className="flex justify-between items-center w-[1200px] max-w-[1200px] py-5 px-10"
-      >
+      <DivFadeUp className="flex justify-between items-center w-[1200px] max-w-[1200px] py-5 px-10">
         <Link href={"/"} className="flex gap-3 items-center justify-start">
           <Image
             src={"/assets/icons/SVG/icon-large-1.svg"}
@@ -61,7 +53,7 @@ export default function Navbar() {
         >
           <MenuIcon />
         </div>
-      </motion.div>
+      </DivFadeUp>
     </div>
   );
 }
