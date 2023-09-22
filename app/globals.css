@@ -84,3 +84,50 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.nav-fade-in {
+  opacity: 0;
+  animation: fade-in 150ms ease-in forwards;
+}
+
+.nav-fade-in-top {
+  opacity: 0;
+  top: 5px;
+  animation: fade-in-top 300ms ease-in-out 200ms forwards;
+}
+
+.nav-fade-out {
+  opacity: 1;
+  top: 0px;
+  animation: fade-out-top 200ms ease-out forwards;
+}
+
+.nav-backing-fade-out {
+  opacity: 1;
+  animation: fade-out 300ms ease-out 250ms forwards;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out-top {
+  to {
+    opacity: 0;
+    top: 5px;
+  }
+}
+@keyframes fade-in-top {
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}

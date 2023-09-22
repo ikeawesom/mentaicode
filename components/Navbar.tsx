@@ -1,104 +1,67 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
-import useThemeContext, { LightCheck } from "@/contexts/ThemeContext";
+import { LightCheck } from "@/contexts/ThemeContext";
 
 import { motion } from "framer-motion";
-import { MoonIcon, SunIcon } from "./ThemeIcons.js";
-import { INITIAL_ANIM_TIME } from "@/constants.js";
-
-const NAVIGATION_LINKS = [
-  { title: "About", link: "/about" },
-  { title: "Portfolio", link: "/portfolio" },
-  { title: "Shop", link: "/shop" },
-  { title: "Blog", link: "/blog" },
-];
+import { INITIAL_ANIM_TIME, LOGO_WIDTH, LOGO_WORD_WIDTH } from "@/constants.js";
+import NavigationLinks from "./NavigationLinks";
+import { MenuIcon } from "./ThemeIcons";
 
 export default function Navbar() {
-  const pathname = usePathname();
-  const { theme, setTheme } = useThemeContext();
-
-  function curPage(link: string) {
-    return pathname === link;
-  }
+  const [navVisible, setNavVisibility] = useState(false);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -10 }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-        transition: { duration: INITIAL_ANIM_TIME, ease: "easeInOut" },
-      }}
-      className={`flex items-center justify-center w-full fixed top-0 left-0 bg-transparent`}
+    <div
+      className={`flex items-center justify-center w-full sticky top-0 z-20 ${
+        LightCheck() ? "bg-custom-white" : "bg-custom-black"
+      }`}
     >
-      <div className="flex justify-between items-center w-[1200px] max-w-[1200px] py-5 px-10">
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: INITIAL_ANIM_TIME, ease: "easeInOut" },
+        }}
+        viewport={{ once: true }}
+        className="flex justify-between items-center w-[1200px] max-w-[1200px] py-5 px-10"
+      >
         <Link href={"/"} className="flex gap-3 items-center justify-start">
           <Image
             src={"/assets/icons/SVG/icon-large-1.svg"}
             alt="Mentaicode"
-            width={40}
-            height={40}
+            width={LOGO_WIDTH}
+            height={LOGO_WIDTH}
           />
           {LightCheck() ? (
             <Image
               src={"/assets/images/header-light.svg"}
               alt="Mentaicode"
-              width={200}
-              height={10}
+              width={LOGO_WORD_WIDTH}
+              height={0}
             />
           ) : (
             <Image
               src={"/assets/images/header-dark.svg"}
               alt="Mentaicode"
-              width={200}
-              height={10}
+              width={LOGO_WORD_WIDTH}
+              height={0}
             />
           )}
         </Link>
-
-        <nav>
-          <ul className="flex justify-between gap-10 items-center">
-            {NAVIGATION_LINKS.map((item, index) => (
-              <Link
-                href={item.link}
-                key={index}
-                className={`hover:text-primary duration-150 group relative
-                 ${
-                   curPage(item.link)
-                     ? "text-primary"
-                     : LightCheck()
-                     ? "text-custom-black"
-                     : "text-custom-white"
-                 }`}
-              >
-                {item.title}
-
-                <span
-                  className={`h-[2.2px] inline-block bg-primary rounded-full 
-                  absolute -bottom-0.5 left-0 group-hover:w-full transition-[width] ease-in-out duration-500 ${
-                    curPage(item.link) ? "w-full" : "w-0"
-                  }`}
-                ></span>
-              </Link>
-            ))}
-            <button
-              className={
-                LightCheck() ? "text-custom-white" : "text-custom-black"
-              }
-              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-            >
-              {LightCheck() ? (
-                <SunIcon className="fill-custom-white" />
-              ) : (
-                <MoonIcon className="fill-custom-white" />
-              )}
-            </button>
-          </ul>
-        </nav>
-      </div>
-    </motion.div>
+        <NavigationLinks
+          navVisible={navVisible}
+          setNavVisible={() => setNavVisibility(!navVisible)}
+        />
+        <div
+          className="place-items-center p-2 bg-primary rounded-full shadow-sm max-[800px]:grid hidden"
+          onClick={() => setNavVisibility(!navVisible)}
+        >
+          <MenuIcon />
+        </div>
+      </motion.div>
+    </div>
   );
 }
