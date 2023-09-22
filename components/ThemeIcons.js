@@ -352,3 +352,82 @@ export const MoonIcon = ({ className, ...rest }) => (
     </svg>
   </ThemeIconContainer>
 );
+
+export const MenuIcon = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} {...props}>
+    <g
+      fill="none"
+      stroke="#191919"
+      strokeDasharray={24}
+      strokeDashoffset={24}
+      strokeLinecap="round"
+      strokeWidth={2}
+    >
+      <path d="M5 5h14">
+        <animate
+          fill="freeze"
+          attributeName="stroke-dashoffset"
+          dur="0.2s"
+          values="24;0"
+        />
+      </path>
+      <path d="M5 12h14">
+        <animate
+          fill="freeze"
+          attributeName="stroke-dashoffset"
+          begin="0.2s"
+          dur="0.2s"
+          values="24;0"
+        />
+      </path>
+      <path d="M5 19h14">
+        <animate
+          fill="freeze"
+          attributeName="stroke-dashoffset"
+          begin="0.4s"
+          dur="0.2s"
+          values="24;0"
+        />
+      </path>
+    </g>
+  </svg>
+);
+
+export const CrossIcon = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={props.width}
+    height={props.width}
+    {...props}
+  >
+    <g fill="none" stroke={props.color} strokeLinecap="round" strokeWidth={2}>
+      <path d="M5 5h14">
+        <animate
+          fill="freeze"
+          attributeName="d"
+          begin="0.2s"
+          dur="0.4s"
+          values="M5 5L19 5;M5 5L19 19"
+        />
+      </path>
+      <path d="M5 12h14">
+        <animate
+          fill="freeze"
+          attributeName="d"
+          dur="0.4s"
+          values="M5 12H19;M12 12H12"
+        />
+        <set attributeName="opacity" begin="0.4s" to={0} />
+      </path>
+      <path d="M5 19h14">
+        <animate
+          fill="freeze"
+          attributeName="d"
+          begin="0.2s"
+          dur="0.4s"
+          values="M5 19L19 19;M5 19L19 5"
+        />
+      </path>
+    </g>
+  </svg>
+);
