@@ -17,7 +17,7 @@ export default function GetStartedButton() {
 
   return (
     <PrimaryButton
-      link="/products"
+      link="/shop"
       text=""
       onMouseOver={() => setHoverState(true)}
       onMouseLeave={() => setHoverState(false)}
