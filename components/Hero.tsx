@@ -16,7 +16,7 @@ type HeroType = {
 export default function Hero({ header, subtext, children }: HeroType) {
   const { theme } = useThemeContext();
   return (
-    <div className="flex flex-col gap-8 items-center justify-center w-full p-8 duration-200">
+    <div className="flex flex-col gap-8 items-center justify-center w-full duration-200">
       <DivFadeUp className="flex flex-col gap-4 text-center w-full justify-center items-center">
         <h1
           className={`${
