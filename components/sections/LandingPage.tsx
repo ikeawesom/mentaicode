@@ -7,6 +7,6 @@ type LandingPageProps = {
 
 export default function LandingPage({ children }: LandingPageProps) {
   return (
-    <div className={`grid place-items-center min-h-[90vh]`}>{children}</div>
+    <div className={`grid place-items-center min-h-[100vh]`}>{children}</div>
   );
 }
