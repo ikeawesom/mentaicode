@@ -2,10 +2,9 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { LightCheck } from "@/contexts/ThemeContext";
 
-import { motion } from "framer-motion";
-import { INITIAL_ANIM_TIME, LOGO_WIDTH, LOGO_WORD_WIDTH } from "@/constants.js";
+import { LightCheck } from "@/contexts/ThemeContext";
+import { LOGO_WIDTH, LOGO_WORD_WIDTH } from "@/constants.js";
 import NavigationLinks from "./NavigationLinks";
 import { MenuIcon } from "./ThemeIcons";
 import DivFadeUp from "./animations/DivFadeUp";
@@ -15,9 +14,7 @@ export default function Navbar() {
 
   return (
     <div
-      className={`flex items-center justify-center w-full sticky top-0 z-20 ${
-        LightCheck() ? "bg-custom-white" : "bg-custom-black"
-      }`}
+      className={`flex items-center justify-center w-full fixed top-0 z-20 backdrop-blur-sm `}
     >
       <DivFadeUp className="flex justify-between items-center w-[1200px] max-w-[1200px] py-5 px-10">
         <Link href={"/"} className="flex gap-3 items-center justify-start">
