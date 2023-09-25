@@ -14,7 +14,7 @@ export default function Navbar() {
 
   return (
     <div
-      className={`flex items-center justify-center w-full fixed top-0 z-20 backdrop-blur-sm `}
+      className={`flex items-center justify-center w-full fixed top-0 z-20 `}
     >
       <DivFadeUp className="flex justify-between items-center w-[1200px] max-w-[1200px] py-5 px-10">
         <Link href={"/"} className="flex gap-3 items-center justify-start">
