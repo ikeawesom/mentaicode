@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Developing from "@/components/Developing";
 import { ThemeContextProvider } from "@/contexts/ThemeContext";
 import Navbar from "@/components/Navbar";
+import PageWrapper from "@/components/PageWrapper";
 
 export const metadata: Metadata = {
   title: "Mentaicode | Ike Lim",
@@ -24,7 +25,7 @@ export default function RootLayout({
         ) : (
           <body>
             <Navbar />
-            {children}
+            <PageWrapper>{children}</PageWrapper>
           </body>
         )}
       </ThemeContextProvider>
