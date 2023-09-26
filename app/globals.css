@@ -85,6 +85,18 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.header-dark-2 {
+  font-size: 46pt;
+  line-height: 110%;
+  font-family: var(--font-warp);
+  letter-spacing: -1px;
+  font-weight: 400;
+  background-image: linear-gradient(135deg, #ff5599 5%, #ff8051 95%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .header-light {
   font-size: 46pt;
   line-height: 110%;
@@ -108,7 +120,19 @@ body {
   font-family: var(--font-warp);
   letter-spacing: -1px;
   font-weight: 400;
-  background-image: linear-gradient(135deg, #12b886 5%, #4dabf7 95%);
+  background-image: linear-gradient(135deg, #12b864 9%, #4de2f7 92%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header-light-3 {
+  font-size: 46pt;
+  line-height: 110%;
+  font-family: var(--font-warp);
+  letter-spacing: -1px;
+  font-weight: 400;
+  background-image: linear-gradient(135deg, #7950f2 9%, #f783ac 92%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
