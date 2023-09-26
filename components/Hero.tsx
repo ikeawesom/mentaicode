@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import useThemeContext, { LightCheck } from "@/contexts/ThemeContext";
+import { LightCheck } from "@/contexts/ThemeContext";
 import { motion } from "framer-motion";
 import { ANIM_DELAY_FACTOR, INITIAL_ANIM_TIME } from "@/constants.js";
 import GetStartedButton from "./buttons/GetStartedButton";
@@ -14,9 +14,8 @@ type HeroType = {
 };
 
 export default function Hero({ header, subtext, children }: HeroType) {
-  const { theme } = useThemeContext();
   return (
-    <div className="flex flex-col gap-8 items-center justify-center w-full duration-200">
+    <div className="flex flex-col gap-8 items-center justify-center w-full">
       <DivFadeUp className="flex flex-col gap-4 text-center w-full justify-center items-center">
         <h1
           className={`${
@@ -39,7 +38,7 @@ export default function Hero({ header, subtext, children }: HeroType) {
           viewport={{ once: true }}
           className={
             "lg:w-[700px] md:w-[540px] sm:w-[450px] max-[499px]:text-md max-[320px]:text-sm font-light subtext " +
-            (theme === "dark" ? "text-custom-white" : "text-custom-black")
+            (LightCheck() ? "text-custom-black" : "text-custom-white")
           }
         >
           {subtext}
