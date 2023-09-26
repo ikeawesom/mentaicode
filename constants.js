@@ -1,4 +1,4 @@
-export const INITIAL_ANIM_TIME = 1;
+export const INITIAL_ANIM_TIME = 0.8;
 export const ANIM_DELAY_FACTOR = 0.2;
 export const LOGO_WIDTH = 40;
 export const LOGO_WORD_WIDTH = 150;
