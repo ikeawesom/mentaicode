@@ -30,6 +30,7 @@ export default function Navbar() {
               alt="Mentaicode"
               width={LOGO_WORD_WIDTH}
               height={0}
+              className="max-[420px]:hidden"
             />
           ) : (
             <Image
@@ -37,6 +38,7 @@ export default function Navbar() {
               alt="Mentaicode"
               width={LOGO_WORD_WIDTH}
               height={0}
+              className="max-[420px]:hidden"
             />
           )}
         </Link>
