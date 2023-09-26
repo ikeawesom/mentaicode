@@ -74,7 +74,7 @@ body {
 }
 
 .header-dark-1 {
-  font-size: 30pt;
+  font-size: 46pt;
   line-height: 110%;
   font-family: var(--font-warp);
   letter-spacing: -1px;
@@ -103,7 +103,7 @@ body {
 }
 
 .header-light-1 {
-  font-size: 30pt;
+  font-size: 46pt;
   line-height: 110%;
   font-family: var(--font-warp);
   letter-spacing: -1px;
