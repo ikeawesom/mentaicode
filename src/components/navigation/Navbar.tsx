@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -11,6 +11,10 @@ import DivFadeUp from "../animations/DivFadeUp";
 
 export default function Navbar() {
   const [navVisible, setNavVisibility] = useState(false);
+
+  const handleNav = useCallback(() => {
+    setNavVisibility(!navVisible);
+  }, [navVisible]);
 
   return (
     <div
@@ -42,13 +46,10 @@ export default function Navbar() {
             />
           )}
         </Link>
-        <NavigationLinks
-          navVisible={navVisible}
-          setNavVisible={() => setNavVisibility(!navVisible)}
-        />
+        <NavigationLinks navVisible={navVisible} setNavVisible={handleNav} />
         <div
           className="place-items-center p-2 bg-primary rounded-full shadow-sm max-[800px]:grid hidden"
-          onClick={() => setNavVisibility(!navVisible)}
+          onClick={handleNav}
         >
           <MenuIcon />
         </div>
