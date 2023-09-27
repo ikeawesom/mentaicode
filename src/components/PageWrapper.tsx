@@ -1,5 +1,5 @@
 "use client";
-import { LightCheck } from "@/contexts/ThemeContext";
+import { LightCheck } from "@/src/contexts/ThemeContext";
 import React from "react";
 
 type PageWrapperProps = {

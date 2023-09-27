@@ -1,27 +1,21 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { INITIAL_ANIM_TIME, ANIM_DELAY_FACTOR } from "@/constants.js";
+import { INITIAL_ANIM_TIME, ANIM_DELAY_FACTOR } from "@/src/constants.jsx";
 
-type LiProps = {
+type DivProps = {
   className?: string;
   children?: React.ReactNode;
   delay?: number;
-  duration?: number;
 };
-export default function LiFadeIn({
-  className,
-  children,
-  delay,
-  duration,
-}: LiProps) {
+export default function DivFadeUp({ className, children, delay }: DivProps) {
   return (
-    <motion.li
-      initial={{ opacity: 0, x: -10 }}
+    <motion.div
+      initial={{ opacity: 0, y: -10 }}
       whileInView={{
         opacity: 1,
-        x: 0,
+        y: 0,
         transition: {
-          duration: duration ? duration : INITIAL_ANIM_TIME,
+          duration: INITIAL_ANIM_TIME,
           ease: "easeInOut",
           delay: delay ? ANIM_DELAY_FACTOR * delay : 0,
         },
@@ -30,6 +24,6 @@ export default function LiFadeIn({
       className={className}
     >
       {children}
-    </motion.li>
+    </motion.div>
   );
 }

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import useThemeContext from "@/contexts/ThemeContext";
+import useThemeContext from "@/src/contexts/ThemeContext";
 import Link from "next/link";
 
 type SecondaryButtonProps = {

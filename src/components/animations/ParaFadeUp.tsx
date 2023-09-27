@@ -1,13 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { INITIAL_ANIM_TIME, ANIM_DELAY_FACTOR } from "@/constants.js";
+import { INITIAL_ANIM_TIME, ANIM_DELAY_FACTOR } from "@/src/constants.jsx";
 
 type DivProps = {
   className?: string;
   children?: React.ReactNode;
   delay?: number;
 };
-export default function DivFadeUp({ className, children, delay }: DivProps) {
+export default function ParaFadeUp({ className, children, delay }: DivProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: -10 }}

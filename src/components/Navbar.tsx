@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { LightCheck } from "@/contexts/ThemeContext";
-import { LOGO_WIDTH, LOGO_WORD_WIDTH } from "@/constants.js";
+import { LightCheck } from "@/src/contexts/ThemeContext";
+import { LOGO_WIDTH, LOGO_WORD_WIDTH } from "@/src/constants.jsx";
 import NavigationLinks from "./NavigationLinks";
 import { MenuIcon } from "./ThemeIcons";
 import DivFadeUp from "./animations/DivFadeUp";

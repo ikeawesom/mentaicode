@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-import useThemeContext from "@/contexts/ThemeContext";
+import useThemeContext from "@/src/contexts/ThemeContext";
 
 function ThemeIconContainer({ children }) {
   const { theme } = useThemeContext();

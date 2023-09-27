@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
-import { LightCheck } from "@/contexts/ThemeContext";
-import { motion } from "framer-motion";
-import { ANIM_DELAY_FACTOR, INITIAL_ANIM_TIME } from "@/constants.js";
+import { LightCheck } from "@/src/contexts/ThemeContext";
 import GetStartedButton from "./utilities/buttons/GetStartedButton";
 import SecondaryButton from "./utilities/buttons/SecondaryButton";
 import DivFadeUp from "./animations/DivFadeUp";

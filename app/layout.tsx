@@ -1,9 +1,9 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import Developing from "@/components/Developing";
-import { ThemeContextProvider } from "@/contexts/ThemeContext";
-import Navbar from "@/components/Navbar";
-import PageWrapper from "@/components/PageWrapper";
+import Developing from "@/src/screens/Developing";
+import { ThemeContextProvider } from "@/src/contexts/ThemeContext";
+import Navbar from "@/src/components/Navbar";
+import PageWrapper from "@/src/components/PageWrapper";
 
 export const metadata: Metadata = {
   title: "Mentaicode | Ike Lim",

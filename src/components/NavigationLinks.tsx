@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
-import useThemeContext, { LightCheck } from "@/contexts/ThemeContext";
+import useThemeContext, { LightCheck } from "@/src/contexts/ThemeContext";
 import { usePathname } from "next/navigation";
 import { SunIcon, MoonIcon, CrossIcon } from "./ThemeIcons";
-import { NAVIGATION_LINKS } from "@/constants.js";
-import "../app/globals.css";
+import { NAVIGATION_LINKS } from "@/src/constants.jsx";
+import "@/app/globals.css";
 
 type NavLinksProps = {
   navVisible: boolean;

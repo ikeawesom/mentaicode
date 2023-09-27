@@ -9,3 +9,12 @@ export const NAVIGATION_LINKS = [
   { title: "Shop", link: "/shop" },
   { title: "Blog", link: "/blog" },
 ];
+
+export const TECH_LIST = [
+  { title: "NextJS", icon: "icon_next.svg" },
+  { title: "ReactJS", icon: "icon_react.svg" },
+  { title: "Firebase", icon: "icon_firebase.svg" },
+  { title: "Supabase", icon: "icon_supabase.svg" },
+  { title: "Python", icon: "icon_python.svg" },
+  { title: "Git", icon: "icon_git.svg" },
+];
