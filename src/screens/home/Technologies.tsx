@@ -5,7 +5,7 @@ import { LightCheck } from "@/src/contexts/ThemeContext";
 import Image from "next/image";
 import { DivFadeUp, LiFadeIn, ParaFadeUp } from "@/src/components/animations";
 import SectionContainer from "@/src/components/sections/SectionContainer";
-import MainHeader from "@/src/components/utilities/headers/MainHeader";
+import MainHeader from "@/src/components/utils/headers/MainHeader";
 import { TECH_LIST } from "@/src/constants";
 
 export default function TechnologiesSection() {

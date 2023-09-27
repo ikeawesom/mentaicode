@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Developing from "@/src/screens/Developing";
 import { ThemeContextProvider } from "@/src/contexts/ThemeContext";
-import Navbar from "@/src/components/Navbar";
+import Navbar from "@/src/components/navigation/Navbar";
 import PageWrapper from "@/src/components/PageWrapper";
 
 export const metadata: Metadata = {

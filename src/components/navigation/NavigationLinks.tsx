@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import useThemeContext, { LightCheck } from "@/src/contexts/ThemeContext";
 import { usePathname } from "next/navigation";
-import { SunIcon, MoonIcon, CrossIcon } from "./ThemeIcons";
+import { SunIcon, MoonIcon, CrossIcon } from "@/src/components/ThemeIcons";
 import { NAVIGATION_LINKS } from "@/src/constants";
 import "@/app/globals.css";
 

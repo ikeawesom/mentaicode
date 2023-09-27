@@ -6,8 +6,8 @@ import Image from "next/image";
 import { LightCheck } from "@/src/contexts/ThemeContext";
 import { LOGO_WIDTH, LOGO_WORD_WIDTH } from "@/src/constants";
 import NavigationLinks from "./NavigationLinks";
-import { MenuIcon } from "./ThemeIcons";
-import DivFadeUp from "./animations/DivFadeUp";
+import { MenuIcon } from "../ThemeIcons";
+import DivFadeUp from "../animations/DivFadeUp";
 
 export default function Navbar() {
   const [navVisible, setNavVisibility] = useState(false);

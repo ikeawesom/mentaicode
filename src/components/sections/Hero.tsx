@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
 import { LightCheck } from "@/src/contexts/ThemeContext";
-import GetStartedButton from "./utilities/buttons/GetStartedButton";
-import SecondaryButton from "./utilities/buttons/SecondaryButton";
-import DivFadeUp from "./animations/DivFadeUp";
-import MainHeader from "./utilities/headers/MainHeader";
-import { ParaFadeUp } from "./animations";
+import GetStartedButton from "../utils/buttons/GetStartedButton";
+import SecondaryButton from "../utils/buttons/SecondaryButton";
+import DivFadeUp from "../animations/DivFadeUp";
+import MainHeader from "../utils/headers/MainHeader";
+import { ParaFadeUp } from "../animations";
 
 type HeroType = {
   header: string;
