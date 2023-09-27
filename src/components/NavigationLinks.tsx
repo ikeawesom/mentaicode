@@ -4,7 +4,7 @@ import Link from "next/link";
 import useThemeContext, { LightCheck } from "@/src/contexts/ThemeContext";
 import { usePathname } from "next/navigation";
 import { SunIcon, MoonIcon, CrossIcon } from "./ThemeIcons";
-import { NAVIGATION_LINKS } from "@/src/constants.jsx";
+import { NAVIGATION_LINKS } from "@/src/constants";
 import "@/app/globals.css";
 
 type NavLinksProps = {

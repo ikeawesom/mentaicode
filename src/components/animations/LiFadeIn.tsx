@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { INITIAL_ANIM_TIME, ANIM_DELAY_FACTOR } from "@/src/constants.jsx";
+import { INITIAL_ANIM_TIME, ANIM_DELAY_FACTOR } from "@/src/constants";
 
 type LiProps = {
   className?: string;
