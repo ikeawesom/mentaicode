@@ -1,6 +1,5 @@
 import Hero, { HeroButtons } from "@/components/Hero";
-import LandingPage from "@/components/sections/LandingPage";
-import TechnologiesSection from "@/components/sections/Technologies";
+import { LandingPage, TechnologiesSection } from "@/screens/home";
 
 export default function Home() {
   return (
