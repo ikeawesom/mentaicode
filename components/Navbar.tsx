@@ -14,7 +14,7 @@ export default function Navbar() {
 
   return (
     <div
-      className={`flex items-center justify-center w-full fixed top-0 z-20 min-[420px]:bg-white min-[420px]:shadow-sm min-[420px]:dark:bg-black bg-opacity-70 min-[420px]:dark:bg-opacity-70 min-[420px]:backdrop-blur-md bg-transparent`}
+      className={`flex items-center justify-center w-full fixed top-0 z-20 min-[420px]:shadow-sm min-[420px]:bg-white min-[420px]:dark:bg-black min-[420px]:bg-opacity-70 min-[420px]:dark:bg-opacity-70 min-[420px]:backdrop-blur-md bg-transparent`}
     >
       <DivFadeUp className="flex justify-between items-center w-[1200px] max-w-[1200px] py-5 px-10">
         <Link href={"/"} className="flex gap-3 items-center justify-start">
