@@ -9,7 +9,7 @@ type PageWrapperProps = {
 export default function PageWrapper({ children }: PageWrapperProps) {
   return (
     <div
-      className={`p-8 bg-gradient-to-b min-h-screen ${
+      className={`p-8 xl:px-48 lg:px-36 md:px-28 sm:px-20 px-6 bg-gradient-to-b min-h-screen ${
         LightCheck()
           ? "from-custom-white to-border"
           : "from-custom-black to-custom-black"

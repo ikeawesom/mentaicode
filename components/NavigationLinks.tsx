@@ -41,6 +41,16 @@ export default function NavigationLinks({
     }
   }, [anim]);
 
+  const handleThemeChange = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
+  useEffect(() => {
+    theme === "dark"
+      ? document.documentElement.classList.add("dark")
+      : document.documentElement.classList.remove("dark");
+  }, [theme]);
+
   return (
     <nav
       id="navlinks-backing"
@@ -94,7 +104,7 @@ export default function NavigationLinks({
         ))}
         <button
           className={LightCheck() ? "text-custom-white" : "text-custom-black"}
-          onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+          onClick={handleThemeChange}
         >
           {LightCheck() ? (
             <SunIcon className="fill-custom-white" />
