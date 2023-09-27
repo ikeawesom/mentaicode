@@ -3,9 +3,9 @@
 import React from "react";
 import { LightCheck } from "@/contexts/ThemeContext";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { DivFadeUp, LiFadeIn, ParaFadeUp } from "../animations";
-import SectionContainer from "./SectionContainer";
+import { DivFadeUp, LiFadeIn, ParaFadeUp } from "@/components/animations";
+import SectionContainer from "@/components/sections/SectionContainer";
+import MainHeader from "@/components/utilities/headers/MainHeader";
 
 const TECH_LIST = [
   { title: "NextJS", icon: "icon_next.svg" },
@@ -20,13 +20,9 @@ export default function TechnologiesSection() {
     <SectionContainer>
       <div className="flex flex-col gap-8 max-w-6xl">
         <DivFadeUp className="flex flex-col gap-3 items-center justify-center">
-          <h1
-            className={`${
-              LightCheck() ? "header-light-1 drop-shadow-md" : "header-dark-1"
-            } lg:w-[1000px] md:w-[620px] sm:w-[500px] max-[639px]:text-5xl max-[320px]:text-4xl text-center`}
-          >
+          <MainHeader headerDark="header-dark-1" headerLight="header-light-1">
             Popular technologies I work with.
-          </h1>
+          </MainHeader>
           <ParaFadeUp
             className={
               "text-center font-light subtext lg:w-[700px] md:w-[540px] sm:w-[450px] max-[499px]:text-md max-[320px]:text-sm " +
