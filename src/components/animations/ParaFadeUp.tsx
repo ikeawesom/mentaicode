@@ -9,7 +9,7 @@ type DivProps = {
 };
 export default function ParaFadeUp({ className, children, delay }: DivProps) {
   return (
-    <motion.div
+    <motion.p
       initial={{ opacity: 0, y: -10 }}
       whileInView={{
         opacity: 1,
@@ -24,6 +24,6 @@ export default function ParaFadeUp({ className, children, delay }: DivProps) {
       className={className}
     >
       {children}
-    </motion.div>
+    </motion.p>
   );
 }
