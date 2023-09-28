@@ -9,7 +9,9 @@ export default function SectionContentCard({
   className,
 }: SectionContentProps) {
   return (
-    <div className={`flex flex-col gap-8 max-w-6xl ${className}`}>
+    <div
+      className={`flex flex-col gap-8 max-w-6xl ${className} justify-center items-center relative`}
+    >
       {children}
     </div>
   );
