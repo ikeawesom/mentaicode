@@ -10,7 +10,7 @@ export default function SectionContainer({
   children,
 }: ContainerProps) {
   return (
-    <div className={"w-full grid place-items-center py-20 " + className}>
+    <div className={"w-full grid place-items-center py-36 " + className}>
       {children}
     </div>
   );
