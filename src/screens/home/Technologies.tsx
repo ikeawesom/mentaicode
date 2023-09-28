@@ -8,11 +8,13 @@ import SectionContainer from "@/src/components/sections/SectionContainer";
 import MainHeader from "@/src/components/utils/headers/MainHeader";
 import { ICONS_SIZE, TECH_LIST } from "@/src/utils/constants";
 import SectionContentCard from "@/src/components/sections/SectionContentCard";
+import GlowBlur from "@/src/components/sections/GlowBlur";
 
 export default function TechnologiesSection() {
   return (
     <SectionContainer>
       <SectionContentCard className="flex flex-col gap-8 max-w-6xl">
+        <GlowBlur headerType="header-1" />
         <DivFadeUp className="flex flex-col gap-3 items-center justify-center">
           <MainHeader headerDark="header-1" headerLight="header-1">
             Popular technologies I work with.
@@ -32,7 +34,7 @@ export default function TechnologiesSection() {
         <ul className="list-none flex gap-x-5 gap-y-10 items-center justify-center flex-wrap">
           {TECH_LIST.map((item, index) => (
             <LiFadeIn duration={1} key={index} delay={index}>
-              <div className="flex flex-col gap-2 items-center justify-center relative group hover:scale-90 ease-in-out duration-150 dark:bg-gradient-to-br min-[300px]:dark:from-slate-700 min-[300px]:dark:to-slate-800 rounded-md min-[330px]:p-5 h-full p-2">
+              <div className="flex flex-col gap-2 items-center justify-center relative group hover:scale-90 ease-in-out duration-150 dark:bg-gradient-to-br min-[300px]:dark:from-slate-700 min-[300px]:dark:to-slate-800 rounded-md min-[330px]:p-5 h-full p-2  border-2 dark:border-slate-700 border-transparent">
                 <Image
                   src={`assets/images/technologies/${item.icon}`}
                   alt={item.title}
