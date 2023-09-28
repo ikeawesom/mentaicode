@@ -9,6 +9,7 @@ import Image from "next/image";
 import { DivFadeUp, LiFadeIn, ParaFadeUp } from "@/src/components/animations";
 import GlowBlur from "@/src/components/sections/GlowBlur";
 import { LightCheck } from "@/src/contexts/ThemeContext";
+import DarkCard from "@/src/components/utils/cards/DarkCard";
 
 export default function TestimonialsSection() {
   return (
@@ -20,21 +21,19 @@ export default function TestimonialsSection() {
             Don't just take my word for it. Here is what others have to say...
           </MainHeader>
           <ParaFadeUp
-            className={
-              "text-center font-light subtext lg:w-[700px] md:w-[540px] sm:w-[450px] max-[499px]:text-md max-[320px]:text-sm " +
-              (LightCheck() ? "text-custom-black" : "text-custom-white")
-            }
+            className={`text-center font-light
+              ${LightCheck() ? "text-custom-black" : "text-custom-white"}`}
           >
             Real tesimonials from happy co-workers: What people are saying about
             my work.
           </ParaFadeUp>
         </DivFadeUp>
-        <ul className="list-none grid grid-cols-2 gap-x-10 relative">
+        <ul className="list-none grid lg:grid-cols-2 gap-10 relative grid-cols-1">
           {TESTIMONIALS.map((item, index) => (
             <LiFadeIn duration={1} key={index} delay={index}>
-              <div className="flex flex-col gap-5 items-start justify-start  min-[300px]:dark:from-slate-700 min-[300px]:dark:to-slate-800 rounded-md min-[330px]:p-5 h-full p-2 border-transparent border-2 dark:border-gray-700 dark:bg-gradient-to-br">
-                <div className="flex flex-row gap-x-3 items-center justify-start">
-                  <div className="rounded-full w-[80px] h-[80px] overflow-hidden relative">
+              <DarkCard className="flex flex-col gap-5 min-[330px]:items-start justify-start h-full">
+                <div className="flex min-[330px]:flex-row flex-col gap-3 items-center justify-start">
+                  <div className="rounded-full w-[80px] aspect-square overflow-hidden relative">
                     <Image
                       src={`/assets/images/testimonials/${item.src}`}
                       alt={item.name}
@@ -42,15 +41,19 @@ export default function TestimonialsSection() {
                       objectFit="cover"
                     />
                   </div>
-                  <div className="flex flex-col gap-y-1 items-start justify-center">
-                    <p className="dark:text-gray-300 font-bold">{item.name}</p>
-                    <p className="dark:text-gray-300">{item.from}</p>
+                  <div className="w-full flex flex-col gap-y-1 min-[330px]:items-start items-center justify-center text-center min-[330px]:text-start">
+                    <p className="dark:text-gray-300 font-bold sm:text-lg text-sm">
+                      {item.name}
+                    </p>
+                    <p className="dark:text-gray-400 sm:text-lg text-base">
+                      {item.from}
+                    </p>
                   </div>
                 </div>
-                <h4 className="dark:text-gray-300 font-light text-xl">
+                <h4 className="dark:text-gray-300 font-light sm:text-xl text-lg">
                   "{item.quote}"
                 </h4>
-              </div>
+              </DarkCard>
             </LiFadeIn>
           ))}
         </ul>
