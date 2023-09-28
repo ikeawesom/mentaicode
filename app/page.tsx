@@ -1,5 +1,6 @@
 import Hero, { HeroButtons } from "@/src/components/sections/Hero";
 import { LandingPage, TechnologiesSection } from "@/src/screens/home";
+import TestimonialsSection from "@/src/screens/home/Testimonials";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         </Hero>
       </LandingPage>
       <TechnologiesSection />
+      <TestimonialsSection />
     </>
   );
 }
