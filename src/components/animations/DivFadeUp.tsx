@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { INITIAL_ANIM_TIME, ANIM_DELAY_FACTOR } from "@/src/constants";
+import { INITIAL_ANIM_TIME, ANIM_DELAY_FACTOR } from "@/src/utils/constants";
 
 type DivProps = {
   className?: string;
