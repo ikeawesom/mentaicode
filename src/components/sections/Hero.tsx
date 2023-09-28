@@ -21,10 +21,8 @@ export default function Hero({ header, subtext, children }: HeroType) {
           {header}
         </MainHeader>
         <ParaFadeUp
-          className={
-            "lg:w-[700px] md:w-[540px] sm:w-[450px] max-[499px]:text-md max-[320px]:text-sm font-light subtext " +
-            (LightCheck() ? "text-custom-black" : "text-custom-white")
-          }
+          className={`font-light text-center
+            ${LightCheck() ? "text-custom-black" : "text-custom-white"}`}
         >
           {subtext}
         </ParaFadeUp>

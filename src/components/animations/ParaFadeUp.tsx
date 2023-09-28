@@ -21,7 +21,7 @@ export default function ParaFadeUp({ className, children, delay }: DivProps) {
         },
       }}
       viewport={{ once: true }}
-      className={className}
+      className={`lg:w-[700px] md:w-[540px] sm:w-[450px] max-[499px]:text-md ${className}`}
     >
       {children}
     </motion.p>
