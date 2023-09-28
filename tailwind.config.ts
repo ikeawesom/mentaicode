@@ -26,6 +26,14 @@ const config: Config = {
         'custom-white': 'var(--custom-white)',
         'dark-grey': 'var(--dark-grey)',
         'light-grey': 'var(--light-grey)',
+
+        'header-end': '#ff7575',
+        'header-1-start': '#12b864',
+        'header-1-end': '#4de2f7',
+        'header-2-start': '#ff5599',
+        'header-2-end': '#ff8051',
+        'header-3-start': '#7950f2',
+        'header-3-end': '#f783ac',
       }
     },
   },

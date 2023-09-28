@@ -1,10 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Tilt+Warp&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Tilt+Warp&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Onest&family=Tilt+Warp&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --font-default: "Merriweather Sans", sans-serif;
+  --font-default: "Onest", sans-serif;
   --font-warp: Tilt Warp, cursive;
 
   --primary: #f09921;
@@ -15,6 +16,14 @@
   --custom-white: #f2f2f2;
   --dark-grey: #63605c;
   --light-grey: #bab6b0;
+
+  --header-end: #ff7575;
+  --header-1-start: #12b864;
+  --header-1-end: #4de2f7;
+  --header-2-start: #ff5599;
+  --header-2-end: #ff8051;
+  --header-3-start: #7950f2;
+  --header-3-end: #f783ac;
 }
 
 * {
@@ -66,7 +75,7 @@ body {
     to bottom,
     var(--secondary) 0%,
     var(--primary) 35%,
-    #ff7575 80%
+    var(--header-end) 80%
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -79,7 +88,11 @@ body {
   font-family: var(--font-warp);
   letter-spacing: -1px;
   font-weight: 400;
-  background-image: linear-gradient(to bottom, var(--primary) 15%, #ff7575 80%);
+  background-image: linear-gradient(
+    to bottom,
+    var(--primary) 15%,
+    var(--header-end) 80%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -91,7 +104,11 @@ body {
   font-family: var(--font-warp);
   letter-spacing: -1px;
   font-weight: 400;
-  background-image: linear-gradient(135deg, #12b864 9%, #4de2f7 92%);
+  background-image: linear-gradient(
+    135deg,
+    var(--header-1-start) 9%,
+    var(--header-1-end) 92%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -103,7 +120,11 @@ body {
   font-family: var(--font-warp);
   letter-spacing: -1px;
   font-weight: 400;
-  background-image: linear-gradient(135deg, #ff5599 5%, #ff8051 95%);
+  background-image: linear-gradient(
+    135deg,
+    var(--header-2-start) 5%,
+    var(--header-2-end) 95%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -115,7 +136,11 @@ body {
   font-family: var(--font-warp);
   letter-spacing: -1px;
   font-weight: 400;
-  background-image: linear-gradient(135deg, #7950f2 9%, #f783ac 92%);
+  background-image: linear-gradient(
+    135deg,
+    var(--header-3-start) 9%,
+    (var(--header-3-end)) 92%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
