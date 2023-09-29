@@ -71,10 +71,7 @@ export function ProjectCard({ name }: ProjectType) {
   const desc = PROJECTS[name].landingDesc;
   const url = PROJECTS[name].link;
 
-  const headerColor = PROJECTS[name].colors.header;
-  const paraColor = PROJECTS[name].colors.para;
   const buttonColor = PROJECTS[name].colors.accent;
-  const buttonTextColor = PROJECTS[name].colors.buttonText;
   const bgColor = PROJECTS[name].colors.background;
 
   return (
@@ -86,22 +83,22 @@ export function ProjectCard({ name }: ProjectType) {
           className="max-h-[90vh] w-auto"
         />
         <div
-          className={`group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto opacity-0 flex flex-col min-[500px]:gap-y-5 gap-y-2 flex-1 min-[350px]:items-start min-[350px]:justify-end items-center justify-center min-[350px]:text-start text-center absolute bottom-0 left-0 min-[350px]:bg-gradient-to-b bg-black/80 min-[350px]:from-transparent ${bgColor} h-full w-full duration-500 ease-in-out min-[440px]:p-10 p-4`}
+          className={`group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto opacity-0 flex flex-col min-[500px]:gap-y-5 gap-y-2 flex-1 min-[350px]:items-start min-[350px]:justify-end items-center justify-center min-[350px]:text-start text-center absolute bottom-0 left-0 min-[350px]:bg-gradient-to-b max-[350px]:bg-black/80 min-[350px]:from-transparent ${bgColor} h-full w-full duration-500 ease-in-out min-[440px]:p-10 p-4`}
         >
           <h1
-            className={`${headerColor} min-[500px]:text-3xl text-xl xl:text-4xl`}
+            className={`min-[500px]:text-3xl text-xl xl:text-4xl dark:text-custom-white min-[350px]:text-custom-black text-custom-white`}
           >
             {title}
           </h1>
           <p
-            className={`${paraColor} min-[500px]:text-lg text-base max-[440px]:text-sm `}
+            className={`min-[500px]:text-lg text-base max-[440px]:text-sm min-[350px]:text-dark-grey text-light-grey dark:text-light-grey`}
           >
             {desc}
           </p>
           <PrimaryButton
             link={url}
             text=""
-            className={`w-fit ${buttonColor} ${buttonTextColor} min-[500px]:text-lg text-base max-[440px]:px-4`}
+            className={`w-fit ${buttonColor} text-custom-white min-[500px]:text-lg text-base max-[440px]:px-4`}
           >
             View Case Study
           </PrimaryButton>
