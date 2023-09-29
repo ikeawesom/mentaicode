@@ -1,6 +1,9 @@
 import Hero, { HeroButtons } from "@/src/components/sections/Hero";
-import { LandingPage, TechnologiesSection } from "@/src/screens/home";
-import TestimonialsSection from "@/src/screens/home/Testimonials";
+import {
+  LandingPage,
+  TechnologiesSection,
+  TestimonialsSection,
+} from "@/src/screens/home";
 
 export default function Home() {
   return (
