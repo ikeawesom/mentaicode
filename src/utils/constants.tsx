@@ -52,9 +52,6 @@ export const PROJECTS = {
     colors: {
       accent: "bg-[rgb(75,75,223)]",
       background: "min-[350px]:dark:to-[rgb(0,0,36)] min-[350px]:to-[#e5e7ff]",
-      header: "text-custom-black dark:text-custom-white",
-      para: "text-dark-grey dark:text-light-grey",
-      buttonText: "text-custom-white",
     },
   },
   PassSafe: {
@@ -65,9 +62,6 @@ export const PROJECTS = {
     colors: {
       accent: "bg-[#0094df]",
       background: "min-[350px]:dark:to-[#002a41] min-[350px]:to-[#ace3ff]",
-      header: "dark:text-custom-white text-custom-black",
-      para: "text-dark-grey dark:text-light-grey",
-      buttonText: "text-custom-white",
     },
   },
   "Project Econs": {
@@ -77,9 +71,6 @@ export const PROJECTS = {
     colors: {
       accent: "bg-[#00C445]",
       background: "min-[350px]:to-[#a2ffc3] min-[350px]:dark:to-[#00551e]",
-      header: "dark:text-custom-white text-custom-black",
-      para: "text-dark-grey dark:text-light-grey",
-      buttonText: "text-custom-white",
     },
   },
 };
