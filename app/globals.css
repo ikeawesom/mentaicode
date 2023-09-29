@@ -9,7 +9,7 @@
   --font-warp: Tilt Warp, cursive;
 
   --primary: #f09921;
-  --secondary: #ffebd1;
+  --secondary: #e2ac60;
   --border: #fff7ed;
 
   --custom-black: #191919;
@@ -72,10 +72,10 @@ body {
   letter-spacing: -1px;
   font-weight: 400;
   background-image: linear-gradient(
-    to bottom,
-    var(--secondary) 0%,
+    to bottom right,
+    var(--secondary) 5%,
     var(--primary) 35%,
-    var(--header-end) 80%
+    var(--header-end) 70%
   );
   background-clip: text;
   -webkit-background-clip: text;
