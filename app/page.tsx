@@ -4,6 +4,7 @@ import {
   TechnologiesSection,
   TestimonialsSection,
 } from "@/src/screens/home";
+import ProjectSection from "@/src/screens/home/Projects";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       </LandingPage>
       <TechnologiesSection />
       <TestimonialsSection />
+      <ProjectSection />
     </>
   );
 }

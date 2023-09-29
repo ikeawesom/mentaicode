@@ -1,0 +1,25 @@
+:root {
+  --theme-colour: rgb(117, 128, 248);
+  --light-colour: #e5e7ff;
+  --darker-light-colour: #c9c9d3;
+  --font-colour: #282534;
+  --p-colour: #6a6a7f;
+  --outline: #e5e7ff5f;
+  --box-shadow-darker: #00000071;
+  --white: #f2f2f2;
+  --dark-blue: rgb(0, 0, 36);
+
+  /* palette */
+  --denim: rgb(0, 0, 70);
+  --shadow: rgb(70, 70, 89);
+  --spruce: rgb(84, 84, 137);
+  --lapis: rgb(75, 75, 223);
+  --heather: rgb(193, 183, 255);
+
+  /* PassSafe */
+  --light-blue: #71d0ff;
+}
+
+body {
+  background-color: var(--light-colour);
+}

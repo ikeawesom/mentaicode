@@ -1,0 +1,15 @@
+:root {
+  --light-grey: #fbfbfb;
+  --darker-grey: #ebebeb7b;
+  --light-blue: #71d0ff;
+  --dark-colour: #344c59;
+  --dark-blue: #004a72;
+  --blue: #0094df;
+  --grey: #e2e2e2df;
+
+  /* Angel */
+  --lapis: rgb(75, 75, 223);
+  --dark-blue-a: rgb(0, 0, 36);
+  --denim: rgb(0, 0, 70);
+  --white: #f2f2f2;
+}

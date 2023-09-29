@@ -17,17 +17,18 @@ export default function GlowBlur({ headerType }: BlurTypes) {
   if (!LightCheck())
     return (
       <motion.div
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 0, y: 100 }}
         whileInView={{
-          opacity: 0.1,
+          opacity: 0.14,
+          y: 0,
           transition: {
             duration: INITIAL_ANIM_TIME,
             ease: "easeInOut",
-            delay: ANIM_DELAY_FACTOR * 7,
+            delay: ANIM_DELAY_FACTOR * 5,
           },
         }}
         viewport={{ once: true }}
-        className={`-inset-0.5 absolute rounded-3xl blur-3xl pointer-events-none ${
+        className={`top-0 right-32 bottom-0 left-32 absolute rounded-full blur-3xl pointer-events-none ${
           headerType === "header-light" || headerType === "header-dark"
             ? "bg-header-end"
             : headerType === "header-1"
@@ -35,7 +36,7 @@ export default function GlowBlur({ headerType }: BlurTypes) {
             : headerType === "header-2"
             ? "bg-header-2-end"
             : headerType === "header-3"
-            ? "bg-header-3-end"
+            ? "bg-header-3-start"
             : ""
         }`}
       />
