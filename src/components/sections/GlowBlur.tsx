@@ -26,6 +26,7 @@ export default function GlowBlur({ headerType }: BlurTypes) {
             delay: ANIM_DELAY_FACTOR * 7,
           },
         }}
+        viewport={{ once: true }}
         className={`-inset-0.5 absolute rounded-3xl blur-3xl pointer-events-none ${
           headerType === "header-light" || headerType === "header-dark"
             ? "bg-header-end"
