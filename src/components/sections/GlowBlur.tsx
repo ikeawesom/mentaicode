@@ -35,7 +35,7 @@ export default function GlowBlur({ headerType }: BlurTypes) {
             : headerType === "header-2"
             ? "bg-header-2-end"
             : headerType === "header-3"
-            ? "bg-header-3-end"
+            ? "bg-header-3-start"
             : ""
         }`}
       />
