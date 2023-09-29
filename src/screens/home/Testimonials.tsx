@@ -31,7 +31,7 @@ export default function TestimonialsSection() {
         <ul className="list-none grid lg:grid-cols-2 gap-10 relative grid-cols-1">
           {TESTIMONIALS.map((item, index) => (
             <LiFadeIn duration={1} key={index} delay={index}>
-              <DarkCard className="flex flex-col gap-5 min-[330px]:items-start justify-start h-full">
+              <DarkCard className="flex flex-col gap-5 min-[330px]:items-start justify-start h-full min-[330px]:hover:brightness-110 duration-200">
                 <div className="flex min-[330px]:flex-row flex-col gap-3 items-center justify-start">
                   <div className="rounded-full w-[80px] aspect-square overflow-hidden relative">
                     <Image
