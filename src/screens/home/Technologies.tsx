@@ -14,7 +14,8 @@ import Link from "next/link";
 
 import { useLottie } from "lottie-react";
 import ArrowRightPrimary from "@/public/assets/images/lottie/arrow-right-primary.json";
-import PrimaryButton from "@/src/components/utils/buttons/PrimaryButton";
+
+const FEATURED_TECH_LIST = TECH_LIST.filter((item) => item.featured);
 
 export default function TechnologiesSection() {
   const [hoverState, setHoverState] = useState(false);
@@ -46,7 +47,7 @@ export default function TechnologiesSection() {
 
         <DarkCard className="flex flex-col gap-8 items-center justify-center">
           <ul className="list-none flex gap-x-5 gap-y-10 items-center justify-center flex-wrap">
-            {TECH_LIST.map(
+            {FEATURED_TECH_LIST.map(
               (item, index) =>
                 item.featured && (
                   <LiFadeIn duration={1} key={index} delay={index}>
