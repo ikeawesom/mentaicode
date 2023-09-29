@@ -12,12 +12,19 @@ export const NAVIGATION_LINKS = [
 ];
 
 export const TECH_LIST = [
-  { title: "NextJS", icon: "icon_next.svg" },
-  { title: "ReactJS", icon: "icon_react.svg" },
-  { title: "Firebase", icon: "icon_firebase.svg" },
-  { title: "Supabase", icon: "icon_supabase.svg" },
-  { title: "Python", icon: "icon_python.svg" },
-  { title: "Git", icon: "icon_git.svg" },
+  { title: "Python", icon: "icon_python.svg", featured: true },
+  { title: "Java", icon: "icon_java.svg", featured: false },
+  { title: "JavaScript", icon: "icon_js.svg", featured: false },
+  { title: "HTML", icon: "icon_html.svg", featured: false },
+  { title: "CSS", icon: "icon_css.svg", featured: false },
+  { title: "SQL", icon: "icon_sql.svg", featured: true },
+  { title: "MongoDB", icon: "icon_mongo.svg", featured: true },
+  { title: "ReactJS", icon: "icon_react.svg", featured: true },
+  { title: "Flask", icon: "icon_flask.svg", featured: false },
+  { title: "NextJS", icon: "icon_next.svg", featured: true },
+  { title: "Firebase", icon: "icon_firebase.svg", featured: true },
+  { title: "Supabase", icon: "icon_supabase.svg", featured: false },
+  { title: "Git", icon: "icon_git.svg", featured: true },
 ];
 
 export const TESTIMONIALS = [
