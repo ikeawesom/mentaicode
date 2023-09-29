@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { PROJECTS } from "@/src/utils/constants";
 import PrimaryButton from "@/src/components/utils/buttons/PrimaryButton";
 import { DivFadeUp, ParaFadeUp } from "@/src/components/animations";
@@ -9,12 +9,25 @@ import SectionContentCard from "@/src/components/sections/SectionContentCard";
 import GlowBlur from "@/src/components/sections/GlowBlur";
 import MainHeader from "@/src/components/utils/headers/MainHeader";
 import { LightCheck } from "@/src/contexts/ThemeContext";
+import Link from "next/link";
+import { useLottie } from "lottie-react";
+import ArrowRightPrimary from "@/public/assets/images/lottie/arrow-right-primary.json";
 
 type ProjectType = {
   name: "Mademoiselle Angel" | "PassSafe" | "Project Econs";
 };
 
 export default function ProjectSection() {
+  const [hoverState, setHoverState] = useState(false);
+
+  const options = {
+    animationData: ArrowRightPrimary,
+    loop: hoverState,
+    style: { width: 30, height: 30 },
+  };
+
+  const arrow = useLottie(options).View;
+
   return (
     <SectionContainer>
       <SectionContentCard className="flex flex-col gap-8 max-w-6xl">
@@ -27,14 +40,27 @@ export default function ProjectSection() {
             className={`text-center font-light
               ${LightCheck() ? "text-custom-black" : "text-custom-white"}`}
           >
-            Using a mixture of extensive technologies, I strive to make
-            brilliant web and native applications using simple yet effective
-            tech stacks to build dreams.
+            Explore some of my featured projects and get a taste of what I can
+            offer.
           </ParaFadeUp>
         </DivFadeUp>
-        <ProjectCard name="Mademoiselle Angel" />
-        <ProjectCard name="Mademoiselle Angel" />
-        <ProjectCard name="Mademoiselle Angel" />
+        <div className="flex-col flex min-[440px]:gap-52 gap-20 justify-center items-center">
+          <ProjectCard name="Mademoiselle Angel" />
+          <ProjectCard name="PassSafe" />
+          <ProjectCard name="Project Econs" />
+        </div>
+        <DivFadeUp>
+          <Link
+            href="/portfolio"
+            className="text-primary font-semibold hover:brightness-110 duration-200 ease-in-out"
+            onMouseOver={() => setHoverState(true)}
+            onMouseLeave={() => setHoverState(false)}
+          >
+            <span className="flex gap-2 items-center justify-center">
+              Peep at my other works<span>{arrow}</span>
+            </span>
+          </Link>
+        </DivFadeUp>
       </SectionContentCard>
     </SectionContainer>
   );
@@ -52,22 +78,30 @@ export function ProjectCard({ name }: ProjectType) {
   const bgColor = PROJECTS[name].colors.background;
 
   return (
-    <DivFadeUp className={`min-h-[80vh] w-full`}>
+    <DivFadeUp className={`w-full`}>
       <DarkCard className="group relative overflow-hidden shadow-lg grid place-items-center">
         <img
           src={`/projects/${src}`}
           alt={title}
-          className="max-h-[80vh] w-auto"
+          className="max-h-[90vh] w-auto"
         />
         <div
-          className={`group-hover:opacity-100 opacity-0 flex flex-col gap-y-5 flex-1 items-start justify-start absolute bottom-0 left-0 bg-gradient-to-b from-transparent ${bgColor} pt-80 w-full duration-500 ease-in-out p-10`}
+          className={`group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto opacity-0 flex flex-col min-[500px]:gap-y-5 gap-y-2 flex-1 min-[350px]:items-start min-[350px]:justify-end items-center justify-center min-[350px]:text-start text-center absolute bottom-0 left-0 min-[350px]:bg-gradient-to-b bg-black/80 min-[350px]:from-transparent ${bgColor} h-full w-full duration-500 ease-in-out min-[440px]:p-10 p-4`}
         >
-          <h1 className={`${headerColor}`}>{title}</h1>
-          <p className={`${paraColor}`}>{desc}</p>
+          <h1
+            className={`${headerColor} min-[500px]:text-3xl text-xl xl:text-4xl`}
+          >
+            {title}
+          </h1>
+          <p
+            className={`${paraColor} min-[500px]:text-lg text-base max-[440px]:text-sm `}
+          >
+            {desc}
+          </p>
           <PrimaryButton
             link={url}
             text=""
-            className={`w-fit ${buttonColor} ${buttonTextColor}`}
+            className={`w-fit ${buttonColor} ${buttonTextColor} min-[500px]:text-lg text-base max-[440px]:px-4`}
           >
             View Case Study
           </PrimaryButton>
