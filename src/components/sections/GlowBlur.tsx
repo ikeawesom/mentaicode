@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { INITIAL_ANIM_TIME } from "@/src/utils/constants";
+import { ANIM_DELAY_FACTOR, INITIAL_ANIM_TIME } from "@/src/utils/constants";
 import { LightCheck } from "@/src/contexts/ThemeContext";
 
 type BlurTypes = {
@@ -17,15 +17,16 @@ export default function GlowBlur({ headerType }: BlurTypes) {
   if (!LightCheck())
     return (
       <motion.div
-        initial={{ opacity: 0.05 }}
+        initial={{ opacity: 0 }}
         whileInView={{
           opacity: 0.1,
           transition: {
             duration: INITIAL_ANIM_TIME,
             ease: "easeInOut",
+            delay: ANIM_DELAY_FACTOR * 7,
           },
         }}
-        className={`-inset-0.5 absolute rounded-3xl blur-3xl ${
+        className={`-inset-0.5 absolute rounded-3xl blur-3xl pointer-events-none ${
           headerType === "header-light" || headerType === "header-dark"
             ? "bg-header-end"
             : headerType === "header-1"
