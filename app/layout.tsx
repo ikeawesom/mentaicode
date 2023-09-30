@@ -3,13 +3,12 @@ import type { Metadata } from "next";
 import Developing from "@/src/screens/Developing";
 import { ThemeContextProvider } from "@/src/contexts/ThemeContext";
 import Navbar from "@/src/components/navigation/Navbar";
-import PageWrapper from "@/src/components/PageWrapper";
 import Footer from "@/src/components/navigation/Footer";
 
 export const metadata: Metadata = {
   title: {
     template: "%s | Mentaicode | Ike Lim",
-    default: "Mentaicode | Ike Lim", // a default is required when creating a template
+    default: "Mentaicode | Ike Lim",
   },
 
   description: "Sharing my skills and knowledge with others.",
