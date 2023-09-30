@@ -14,15 +14,21 @@ type BlurTypes = {
     | "header-3";
   className?: string;
   force?: boolean;
+  opacity?: number;
 };
 
-export default function GlowBlur({ headerType, className, force }: BlurTypes) {
+export default function GlowBlur({
+  headerType,
+  className,
+  force,
+  opacity,
+}: BlurTypes) {
   if (!LightCheck() || force) {
     return (
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{
-          opacity: 0.14,
+          opacity: opacity ? opacity : 0.14,
           y: 0,
           transition: {
             duration: INITIAL_ANIM_TIME,
