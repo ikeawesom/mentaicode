@@ -1,4 +1,5 @@
 import React from "react";
+import { twMerge } from "tailwind-merge";
 
 type ContainerProps = {
   className?: string;
@@ -10,7 +11,7 @@ export default function SectionContainer({
   children,
 }: ContainerProps) {
   return (
-    <div className={"w-full grid place-items-center py-36 " + className}>
+    <div className={twMerge("w-full grid place-items-center py-36", className)}>
       {children}
     </div>
   );

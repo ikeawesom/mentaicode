@@ -1,5 +1,10 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { useLottie } from "lottie-react";
+import ArrowRightPrimary from "@/public/assets/images/lottie/arrow-right-primary.json";
+import { LightCheck } from "@/src/contexts/ThemeContext";
 import { PROJECTS } from "@/src/utils/constants";
 import PrimaryButton from "@/src/components/utils/buttons/PrimaryButton";
 import { DivFadeUp, ParaFadeUp } from "@/src/components/animations";
@@ -8,10 +13,6 @@ import SectionContainer from "@/src/components/sections/SectionContainer";
 import SectionContentCard from "@/src/components/sections/SectionContentCard";
 import GlowBlur from "@/src/components/sections/GlowBlur";
 import MainHeader from "@/src/components/utils/headers/MainHeader";
-import { LightCheck } from "@/src/contexts/ThemeContext";
-import Link from "next/link";
-import { useLottie } from "lottie-react";
-import ArrowRightPrimary from "@/public/assets/images/lottie/arrow-right-primary.json";
 
 type ProjectType = {
   name: "Mademoiselle Angel" | "PassSafe" | "Project Econs";
@@ -77,9 +78,12 @@ export function ProjectCard({ name }: ProjectType) {
   return (
     <DivFadeUp className={`w-full`}>
       <DarkCard className="group relative overflow-hidden shadow-xl bg-white dark:bg-transparent grid place-items-center">
-        <img
+        <Image
           src={`/projects/${src}`}
           alt={title}
+          width="0"
+          height="0"
+          sizes="100vw"
           className="max-h-[90vh] w-auto"
         />
         <div

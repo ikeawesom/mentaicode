@@ -100,3 +100,47 @@ export const SOCIALS_LINKS = [
   //   link: "https://www.instagram.com/mentaicode/",
   // },
 ];
+
+export const STATISTICS = [
+  { progress: 4, tag: "Years of Experience" },
+  { progress: 10, tag: "Completed Projects" },
+  { progress: 30, tag: "Satisfied Users" },
+];
+
+export const EDUCATION = [
+  {
+    name: "Anglo-Chinese Junior College",
+    start_year: 2021,
+    end_year: 2022,
+    achievements: "Technological Council EXCO: Project Manager",
+    res: "Distinctions in Computing and Mathematics",
+  },
+  {
+    name: "Ngee Ann Secondary School",
+    start_year: 2017,
+    end_year: 2020,
+    achievements: "Senior Sports Leader",
+    res: "Distinctions in A-Maths, E-Maths, Chemistry, Physics, Computing and Geography",
+  },
+];
+
+export const AWARDS = [
+  {
+    name: "Computing @ SMU Award",
+    date: "October 2022",
+    desc: "Outstanding academic performance and passion in computing",
+    awarded_by: "Singapore Management University",
+  },
+  {
+    name: "National Olympiad in Informatics",
+    date: "March 2022",
+    desc: "Bronze Medal and Third in School",
+    awarded_by: "National University of Singapore",
+  },
+  {
+    name: "Canadian Computing Competition",
+    date: "February 2022",
+    desc: "Distinction in junior category",
+    awarded_by: "University of Waterloo",
+  },
+];

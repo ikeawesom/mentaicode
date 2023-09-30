@@ -3,11 +3,14 @@ import type { Metadata } from "next";
 import Developing from "@/src/screens/Developing";
 import { ThemeContextProvider } from "@/src/contexts/ThemeContext";
 import Navbar from "@/src/components/navigation/Navbar";
-import PageWrapper from "@/src/components/PageWrapper";
 import Footer from "@/src/components/navigation/Footer";
 
 export const metadata: Metadata = {
-  title: "Mentaicode | Ike Lim",
+  title: {
+    template: "%s | Mentaicode | Ike Lim",
+    default: "Mentaicode | Ike Lim",
+  },
+
   description: "Sharing my skills and knowledge with others.",
 };
 
@@ -26,7 +29,7 @@ export default function RootLayout({
         ) : (
           <body>
             <Navbar />
-            <PageWrapper>{children}</PageWrapper>
+            {children}
             <Footer />
           </body>
         )}
