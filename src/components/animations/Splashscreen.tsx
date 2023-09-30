@@ -6,7 +6,6 @@ export default function Splashscreen() {
   return (
     <>
       <motion.div
-        key="box1"
         className="bg-primary fixed top-0 bottom-0 right-full w-screen h-screen z-30"
         initial={{ x: "100%", width: "100%" }}
         animate={{ x: 0, width: "0%" }}
@@ -18,7 +17,6 @@ export default function Splashscreen() {
       />
 
       <motion.div
-        key="box2"
         className="bg-secondary fixed top-0 bottom-0 right-full w-screen h-screen z-40 "
         initial={{ x: "100%", width: "100%" }}
         animate={{ x: 0, width: "0%" }}
@@ -30,7 +28,6 @@ export default function Splashscreen() {
       />
 
       <motion.div
-        key="box3"
         className="bg-border fixed top-0 bottom-0 right-full w-screen h-screen z-50"
         initial={{ x: "100%", width: "100%" }}
         animate={{ x: 0, width: "0%" }}
