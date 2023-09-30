@@ -4,6 +4,7 @@ import Developing from "@/src/screens/Developing";
 import { ThemeContextProvider } from "@/src/contexts/ThemeContext";
 import Navbar from "@/src/components/navigation/Navbar";
 import PageWrapper from "@/src/components/PageWrapper";
+import Footer from "@/src/components/navigation/Footer";
 
 export const metadata: Metadata = {
   title: "Mentaicode | Ike Lim",
@@ -26,6 +27,7 @@ export default function RootLayout({
           <body>
             <Navbar />
             <PageWrapper>{children}</PageWrapper>
+            <Footer />
           </body>
         )}
       </ThemeContextProvider>
