@@ -62,7 +62,7 @@ p {
 }
 
 body {
-  background-color: var(--custom-black);
+  @apply dark:bg-custom-black bg-custom-white;
 }
 
 .header-dark {

@@ -31,7 +31,7 @@ export const TESTIMONIALS = [
   {
     name: "Teo Qing Ren",
     from: "Anglo-Chinese Junior College",
-    src: "teo.png",
+    src: "teo.jhf",
     quote:
       "Ike is a confident young man who has displayed a strong sense of purpose in all that he pursues. He is undaunted by challenges and views them as learning opportunities to improve himself.",
   },
@@ -74,3 +74,29 @@ export const PROJECTS = {
     },
   },
 };
+
+export const SOCIALS_LINKS = [
+  {
+    title: "LinkedIn",
+    srcLight: "linkedin-light.svg",
+    srcDark: "linkedin-dark.svg",
+    link: "https://linkedin.com/in/ike-lim/",
+  },
+  {
+    title: "GitHub",
+    srcLight: "github-light.svg",
+    srcDark: "github-dark.svg",
+    link: "https://www.instagram.com/mentaicode/",
+  },
+  {
+    title: "Instagram",
+    srcLight: "instagram-light.svg",
+    srcDark: "instagram-dark.svg",
+    link: "https://www.instagram.com/mentaicode/",
+  },
+  // {
+  //   title: "TikTok",
+  //   src: "",
+  //   link: "https://www.instagram.com/mentaicode/",
+  // },
+];

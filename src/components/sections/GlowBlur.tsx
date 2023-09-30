@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ANIM_DELAY_FACTOR, INITIAL_ANIM_TIME } from "@/src/utils/constants";
 import { LightCheck } from "@/src/contexts/ThemeContext";
+import { twMerge } from "tailwind-merge";
 
 type BlurTypes = {
   headerType:
@@ -11,10 +12,12 @@ type BlurTypes = {
     | "header-1"
     | "header-2"
     | "header-3";
+  className?: string;
+  force?: boolean;
 };
 
-export default function GlowBlur({ headerType }: BlurTypes) {
-  if (!LightCheck())
+export default function GlowBlur({ headerType, className, force }: BlurTypes) {
+  if (!LightCheck() || force) {
     return (
       <motion.div
         initial={{ opacity: 0, y: 100 }}
@@ -28,17 +31,21 @@ export default function GlowBlur({ headerType }: BlurTypes) {
           },
         }}
         viewport={{ once: true }}
-        className={`top-5 bottom-5 min-[400px]:right-32 min-[400px]:left-32 right-10 left-10 absolute rounded-full blur-3xl pointer-events-none ${
-          headerType === "header-light" || headerType === "header-dark"
-            ? "bg-header-end"
-            : headerType === "header-1"
-            ? "bg-header-1-end"
-            : headerType === "header-2"
-            ? "bg-header-2-end"
-            : headerType === "header-3"
-            ? "bg-header-3-start"
-            : ""
-        }`}
+        className={twMerge(
+          `top-5 bottom-5 min-[400px]:right-32 min-[400px]:left-32 right-10 left-10 absolute rounded-full blur-3xl pointer-events-none ${
+            headerType === "header-light" || headerType === "header-dark"
+              ? "bg-header-end"
+              : headerType === "header-1"
+              ? "bg-header-1-end"
+              : headerType === "header-2"
+              ? "bg-header-2-end"
+              : headerType === "header-3"
+              ? "bg-header-3-start"
+              : ""
+          }`,
+          className
+        )}
       />
     );
+  }
 }
