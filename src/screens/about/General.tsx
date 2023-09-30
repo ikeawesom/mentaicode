@@ -48,7 +48,7 @@ export default function GeneralSection() {
             {STATISTICS.map((item, index) => (
               <LiFadeIn
                 key={index}
-                delay={index * 2 + 2}
+                delay={index + 2}
                 className="flex flex-col gap-y-2 items-center justify-center brightness-90 dark:brightness-75 hover:brightness-100 dark:hover:brightness-100 duration-300 cursor-default"
               >
                 <h1 className="text-primary font-bold">{item.progress}+</h1>
