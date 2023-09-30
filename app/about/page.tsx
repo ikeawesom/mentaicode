@@ -1,12 +1,17 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React from "react";
+import { Metadata } from "next";
 import { DivFadeUp, LiFadeIn, ParaFadeUp } from "@/src/components/animations";
 import AnimationWrapper from "@/src/components/animations/AnimationWrapper";
 import GlowBlur from "@/src/components/sections/GlowBlur";
 import SectionContainer from "@/src/components/sections/SectionContainer";
 import MainHeader from "@/src/components/utils/headers/MainHeader";
 import { STATISTICS } from "@/src/utils/constants";
+
+export const metadata: Metadata = {
+  title: "About",
+};
 
 export default function AboutPage() {
   return (
