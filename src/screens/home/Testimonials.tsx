@@ -33,12 +33,14 @@ export default function TestimonialsSection() {
             <LiFadeIn duration={1} key={index} delay={index}>
               <DarkCard className="flex flex-col gap-5 min-[330px]:items-start justify-start h-full min-[330px]:hover:brightness-110 duration-200">
                 <div className="flex min-[330px]:flex-row flex-col gap-3 items-center justify-start">
-                  <div className="rounded-full w-[80px] aspect-square overflow-hidden relative">
+                  <div className="rounded-full w-[80px] aspect-square overflow-hidden">
                     <Image
                       src={`/assets/images/testimonials/${item.src}`}
                       alt={item.name}
-                      layout="fill"
-                      objectFit="cover"
+                      width="0"
+                      height="0"
+                      sizes="100vw"
+                      className="w-full h-auto"
                     />
                   </div>
                   <div className="w-full flex flex-col gap-y-1 min-[330px]:items-start items-center justify-center text-center min-[330px]:text-start">

@@ -31,7 +31,7 @@ export const TESTIMONIALS = [
   {
     name: "Teo Qing Ren",
     from: "Anglo-Chinese Junior College",
-    src: "teo.png",
+    src: "teo.jhf",
     quote:
       "Ike is a confident young man who has displayed a strong sense of purpose in all that he pursues. He is undaunted by challenges and views them as learning opportunities to improve himself.",
   },
