@@ -26,7 +26,7 @@ export default function RootLayout({
         ) : (
           <body>
             <Navbar />
-            <PageWrapper>{children}</PageWrapper>
+            {children}
             <Footer />
           </body>
         )}
