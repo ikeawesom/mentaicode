@@ -34,6 +34,9 @@ const config: Config = {
         'header-2-end': '#ff8051',
         'header-3-start': '#7950f2',
         'header-3-end': '#f783ac',
+      },
+      boxShadow: {
+        "footer": '0 0 2px 1px rgb(0 0 0 / 0.2)'
       }
     },
   },
