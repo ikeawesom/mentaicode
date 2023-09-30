@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { INITIAL_ANIM_TIME, ANIM_DELAY_FACTOR } from "@/src/utils/constants";
+import { twMerge } from "tailwind-merge";
 
 type DivProps = {
   className?: string;
@@ -21,7 +22,10 @@ export default function ParaFadeUp({ className, children, delay }: DivProps) {
         },
       }}
       viewport={{ once: true }}
-      className={`lg:w-[700px] md:w-[540px] sm:w-[450px] max-[499px]:text-md ${className}`}
+      className={twMerge(
+        `lg:w-[700px] md:w-[540px] sm:w-[450px] max-[499px]:text-md`,
+        className
+      )}
     >
       {children}
     </motion.p>

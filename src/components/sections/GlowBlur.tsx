@@ -28,7 +28,7 @@ export default function GlowBlur({ headerType }: BlurTypes) {
           },
         }}
         viewport={{ once: true }}
-        className={`top-0 right-32 bottom-0 left-32 absolute rounded-full blur-3xl pointer-events-none ${
+        className={`top-5 bottom-5 min-[400px]:right-32 min-[400px]:left-32 right-10 left-10 absolute rounded-full blur-3xl pointer-events-none ${
           headerType === "header-light" || headerType === "header-dark"
             ? "bg-header-end"
             : headerType === "header-1"
