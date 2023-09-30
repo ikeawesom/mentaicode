@@ -1,5 +1,12 @@
 import LandingPage from "./LandingPage";
 import TechnologiesSection from "./Technologies";
 import TestimonialsSection from "./Testimonials";
-
-export { LandingPage, TechnologiesSection, TestimonialsSection };
+import ProjectSection from "./Projects";
+import ActionCallSection from "./ActionCall";
+export {
+  LandingPage,
+  TechnologiesSection,
+  TestimonialsSection,
+  ProjectSection,
+  ActionCallSection,
+};
