@@ -69,7 +69,7 @@ export default function TechnologiesSection() {
 
           <DivFadeUp>
             <Link
-              href="/portfolio"
+              href="/about"
               className="text-primary font-semibold hover:brightness-110 duration-200 ease-in-out"
               onMouseOver={() => setHoverState(true)}
               onMouseLeave={() => setHoverState(false)}
