@@ -36,7 +36,7 @@ export default function ActionCallSection() {
           delay={2}
         >
           <GetStartedButton text="Start your journey" />
-          <span className="dark:text-custom-white text-custom-black ">
+          <span className="dark:text-custom-white text-custom-black text-center">
             Unsure where your head's at?{" "}
             <Link
               href="/"
