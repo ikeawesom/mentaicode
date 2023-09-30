@@ -1,3 +1,4 @@
+import AnimationWrapper from "@/src/components/animations/AnimationWrapper";
 import Hero, { HeroButtons } from "@/src/components/sections/Hero";
 import {
   LandingPage,
@@ -9,7 +10,7 @@ import {
 
 export default function Home() {
   return (
-    <>
+    <AnimationWrapper>
       <LandingPage>
         <Hero
           header="Empower Your Digital Journey with Innovative Solutions."
@@ -22,6 +23,6 @@ export default function Home() {
       <TestimonialsSection />
       <ProjectSection />
       <ActionCallSection />
-    </>
+    </AnimationWrapper>
   );
 }
