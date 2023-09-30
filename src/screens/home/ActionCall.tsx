@@ -18,12 +18,12 @@ export default function ActionCallSection() {
           <MainHeader
             headerDark="header-dark"
             headerLight="header-light"
-            className="text-8xl max-[639px]:text-7xl max-[320px]:text-5xl"
+            className="text-7xl max-[320px]:text-5xl"
           >
             Ready to embark on your Digital Journey?
           </MainHeader>
           <ParaFadeUp
-            className={`text-center font-light text-xl max-[320px]:text-base
+            className={`text-center font-light text-lg max-[320px]:text-base
               ${LightCheck() ? "text-custom-black" : "text-custom-white"}`}
           >
             Let's collaborate to build remarkable digtial solutions tailored to
@@ -31,15 +31,22 @@ export default function ActionCallSection() {
             or stunning UI/UX design, I've got you covered.
           </ParaFadeUp>
         </DivFadeUp>
-        <div className="flex flex-col gap-4 items-center justify-center">
+        <DivFadeUp
+          className="flex flex-col gap-4 items-center justify-center"
+          delay={2}
+        >
           <GetStartedButton text="Start your journey" />
-          <Link
-            href="/"
-            className="dark:text-custom-white text-custom-black hover:dark:text-secondary hover:text-secondary duration-200 underline underline-offset-4"
-          >
-            Schedule a call
-          </Link>
-        </div>
+          <span className="dark:text-custom-white text-custom-black ">
+            Unsure where your head's at?{" "}
+            <Link
+              href="/"
+              className="hover:dark:text-secondary hover:text-secondary duration-200 underline underline-offset-4"
+            >
+              Book a call
+            </Link>
+            {" and let's hatch your dream."}
+          </span>
+        </DivFadeUp>
       </SectionContentCard>
     </SectionContainer>
   );
