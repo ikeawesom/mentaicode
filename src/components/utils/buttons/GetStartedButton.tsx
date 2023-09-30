@@ -4,7 +4,11 @@ import PrimaryButton from "./PrimaryButton";
 import { useLottie } from "lottie-react";
 import ArrowRight from "@/public/assets/images/lottie/arrow-right.json";
 
-export default function GetStartedButton() {
+type GetStartedProps = {
+  text?: string;
+};
+
+export default function GetStartedButton({ text }: GetStartedProps) {
   const [hoverState, setHoverState] = useState(false);
 
   const options = {
@@ -23,7 +27,7 @@ export default function GetStartedButton() {
       onMouseLeave={() => setHoverState(false)}
     >
       <span className="font-bold text-custom-black flex gap-2 items-center justify-center">
-        Get started <span>{arrow}</span>
+        {text ? text : "Get started"} <span>{arrow}</span>
       </span>
     </PrimaryButton>
   );

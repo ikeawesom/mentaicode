@@ -1,6 +1,7 @@
 "use client";
 import { LightCheck } from "@/src/contexts/ThemeContext";
 import React from "react";
+import { twMerge } from "tailwind-merge";
 
 type HeaderType = {
   className?: string;
@@ -18,9 +19,12 @@ export default function MainHeader({
 }: HeaderType) {
   return (
     <h1
-      className={`${
-        LightCheck() ? `${headerLight} drop-shadow-md` : headerDark
-      } min-[1380px]:w-[1000px] lg:w-[800px] md:w-[620px] sm:w-[500px] max-[639px]:text-5xl max-[320px]:text-4xl ${className} text-center relative`}
+      className={twMerge(
+        `${
+          LightCheck() ? `${headerLight} drop-shadow-md` : headerDark
+        } min-[1380px]:w-[1000px] lg:w-[800px] md:w-[620px] sm:w-[500px] max-[639px]:text-5xl max-[320px]:text-4xl text-center text-6xl relative`,
+        className
+      )}
     >
       {children}
     </h1>
