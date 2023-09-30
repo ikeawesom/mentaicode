@@ -7,7 +7,11 @@ import PageWrapper from "@/src/components/PageWrapper";
 import Footer from "@/src/components/navigation/Footer";
 
 export const metadata: Metadata = {
-  title: "Mentaicode | Ike Lim",
+  title: {
+    template: "%s | Mentaicode | Ike Lim",
+    default: "Mentaicode | Ike Lim", // a default is required when creating a template
+  },
+
   description: "Sharing my skills and knowledge with others.",
 };
 
