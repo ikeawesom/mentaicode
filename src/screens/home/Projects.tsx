@@ -76,7 +76,7 @@ export function ProjectCard({ name }: ProjectType) {
 
   return (
     <DivFadeUp className={`w-full`}>
-      <DarkCard className="group relative overflow-hidden shadow-lg grid place-items-center">
+      <DarkCard className="group relative overflow-hidden shadow-xl bg-white dark:bg-transparent grid place-items-center">
         <img
           src={`/projects/${src}`}
           alt={title}
