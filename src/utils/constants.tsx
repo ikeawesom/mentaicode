@@ -86,7 +86,7 @@ export const SOCIALS_LINKS = [
     title: "GitHub",
     srcLight: "github-light.svg",
     srcDark: "github-dark.svg",
-    link: "https://www.instagram.com/mentaicode/",
+    link: "https://github.com/ikeawesom/",
   },
   {
     title: "Instagram",
