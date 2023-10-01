@@ -2,6 +2,7 @@ import React from "react";
 import { Metadata } from "next";
 import AnimationWrapper from "@/src/components/animations/AnimationWrapper";
 import GeneralSection from "@/src/screens/about/General";
+import PageWrapper from "@/src/components/PageWrapper";
 
 export const metadata: Metadata = {
   title: "About",
@@ -10,7 +11,9 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <AnimationWrapper className="pt-[10vh]">
-      <GeneralSection />
+      <PageWrapper>
+        <GeneralSection />
+      </PageWrapper>
     </AnimationWrapper>
   );
 }
