@@ -11,7 +11,7 @@ import { LightCheck } from "@/src/contexts/ThemeContext";
 
 export default function Stack() {
   return (
-    <SectionContainer className="min-[420px]:py-10 py-0 flex flex-col gap-10">
+    <SectionContainer className="min-[420px]:py-10 py-0 flex flex-col gap-10 pb-20">
       <DivFadeUp className="flex flex-col gap-3 items-center justify-center">
         <MainHeader headerDark="header-1" headerLight="header-1">
           My Stack
@@ -29,7 +29,7 @@ export default function Stack() {
         {TECH_CAT.map((cat, catindex) => (
           <DarkCard
             key={catindex}
-            className={`hover:opacity-100 opacity-75 duration-200 ease-in-out transition-opacity relative ${
+            className={`min-[330px]:hover:opacity-100 min-[330px]:opacity-75 duration-200 ease-in-out transition-opacity relative ${
               cat.small ? "flex-1" : "w-full"
             }`}
             force={true}
@@ -53,7 +53,7 @@ export default function Stack() {
                             width={ICONS_SIZE}
                             height={ICONS_SIZE}
                           />
-                          <h4 className="text-sm bg-custom-black text-custom-white dark:bg-custom-white dark:text-custom-black py-1 px-4 rounded-md absolute -bottom-5 group-hover:-bottom-7  group-hover:opacity-100 opacity-0 duration-300 transition-all ease-in-out text-center">
+                          <h4 className="text-sm bg-custom-black text-custom-white dark:bg-custom-white dark:text-custom-black py-1 px-4 rounded-md absolute -bottom-4 min-[630px]:group-hover:-bottom-7 group-hover:-bottom-6 group-hover:opacity-100 opacity-0 duration-300 transition-all ease-in-out text-center">
                             {tech.title}
                           </h4>
                         </div>

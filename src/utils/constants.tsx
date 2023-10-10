@@ -113,7 +113,7 @@ export const TECH_LIST = [
     cat: ["ui"],
   },
   {
-    title: "Premier Pro",
+    title: "Premier",
     icon: "icon_prem.svg",
     featured: false,
     cat: ["ui"],
@@ -205,7 +205,8 @@ export const EDUCATION = [
     name: "Anglo-Chinese Junior College",
     start_year: 2021,
     end_year: 2022,
-    achievements: "Technological Council EXCO: Project Manager",
+    achievements:
+      "Technological Council Executive Committee and Project Manager",
     res: "Distinctions in Computing and Mathematics",
   },
   {
@@ -233,7 +234,7 @@ export const AWARDS = [
   {
     name: "Canadian Computing Competition",
     date: "February 2022",
-    desc: "Distinction in junior category",
+    desc: "Distinction in Junior category",
     awarded_by: "University of Waterloo",
   },
 ];

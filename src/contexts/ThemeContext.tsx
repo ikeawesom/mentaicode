@@ -1,6 +1,5 @@
 "use client";
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { Toaster } from "sonner";
 
 type ContextTypes = {
   theme: Themes;
@@ -32,7 +31,6 @@ export function ThemeContextProvider({ children }: ProviderTypes) {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <Toaster richColors position="top-center" />
       {children}
     </ThemeContext.Provider>
   );
