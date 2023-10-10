@@ -1,5 +1,6 @@
 "use client";
 import React, { createContext, useContext, useEffect, useState } from "react";
+import { Toaster } from "sonner";
 
 type ContextTypes = {
   theme: Themes;
@@ -20,7 +21,9 @@ export function ThemeContextProvider({ children }: ProviderTypes) {
     const userPrefs = window.localStorage.getItem("theme");
 
     if (userPrefs === "dark") setTheme("dark");
-    if (userPrefs === "light") setTheme("light");
+    if (userPrefs === "light") {
+      setTheme("light");
+    }
   }, []);
 
   useEffect(() => {
@@ -29,6 +32,7 @@ export function ThemeContextProvider({ children }: ProviderTypes) {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
+      <Toaster richColors position="top-center" />
       {children}
     </ThemeContext.Provider>
   );
