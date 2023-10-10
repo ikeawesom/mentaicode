@@ -7,7 +7,7 @@ import Footer from "@/src/components/navigation/Footer";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Mentaicode | Ike Lim",
+    template: "%s | Mentaicode",
     default: "Mentaicode | Ike Lim",
   },
 
