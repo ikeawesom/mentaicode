@@ -11,20 +11,113 @@ export const NAVIGATION_LINKS = [
   { title: "Blog", link: "/blog" },
 ];
 
+export const TECH_CAT = [
+  { id: "language", title: "Languages", small: false },
+  { id: "web", title: "Web Development Technologies", small: false },
+  { id: "backend", title: "Backend Technologies", small: false },
+  { id: "frontend", title: "Frontend Technologies", small: false },
+  { id: "database", title: "Databases", small: false },
+  { id: "version", title: "Version Control", small: true },
+  { id: "ui", title: "UI/UX Design", small: true },
+];
+
 export const TECH_LIST = [
-  { title: "Python", icon: "icon_python.svg", featured: true },
-  { title: "Java", icon: "icon_java.svg", featured: false },
-  { title: "JavaScript", icon: "icon_js.svg", featured: false },
-  { title: "HTML", icon: "icon_html.svg", featured: false },
-  { title: "CSS", icon: "icon_css.svg", featured: false },
-  { title: "SQL", icon: "icon_sql.svg", featured: true },
-  { title: "MongoDB", icon: "icon_mongo.svg", featured: true },
-  { title: "ReactJS", icon: "icon_react.svg", featured: true },
-  { title: "Flask", icon: "icon_flask.svg", featured: false },
-  { title: "NextJS", icon: "icon_next.svg", featured: true },
-  { title: "Firebase", icon: "icon_firebase.svg", featured: true },
-  { title: "Supabase", icon: "icon_supabase.svg", featured: false },
-  { title: "Git", icon: "icon_git.svg", featured: true },
+  {
+    title: "Python",
+    icon: "icon_python.svg",
+    featured: true,
+    cat: ["language", "backend"],
+  },
+  {
+    title: "Java",
+    icon: "icon_java.svg",
+    featured: false,
+    cat: ["language", "backend"],
+  },
+  {
+    title: "HTML",
+    icon: "icon_html.svg",
+    featured: false,
+    cat: ["frontend", "web"],
+  },
+  {
+    title: "CSS",
+    icon: "icon_css.svg",
+    featured: false,
+    cat: ["frontend", "web"],
+  },
+  {
+    title: "JavaScript",
+    icon: "icon_js.svg",
+    featured: false,
+    cat: ["language", "backend", "frontend", "web"],
+  },
+  {
+    title: "SQL",
+    icon: "icon_sql.svg",
+    featured: true,
+    cat: ["database"],
+  },
+  {
+    title: "MongoDB",
+    icon: "icon_mongo.svg",
+    featured: true,
+    cat: ["database"],
+  },
+  {
+    title: "ReactJS",
+    icon: "icon_react.svg",
+    featured: true,
+    cat: ["frontend", "web"],
+  },
+  {
+    title: "Flask",
+    icon: "icon_flask.svg",
+    featured: false,
+    cat: ["backend", "web"],
+  },
+  {
+    title: "NextJS",
+    icon: "icon_next.svg",
+    featured: true,
+    cat: ["backend", "frontend", "web"],
+  },
+  {
+    title: "Firebase",
+    icon: "icon_firebase.svg",
+    featured: true,
+    cat: ["backend", "database", "web"],
+  },
+  {
+    title: "Supabase",
+    icon: "icon_supabase.svg",
+    featured: false,
+    cat: ["backend", "database", "web"],
+  },
+  {
+    title: "Git",
+    icon: "icon_git.svg",
+    featured: true,
+    cat: ["version"],
+  },
+  {
+    title: "Figma",
+    icon: "icon_figma.svg",
+    featured: true,
+    cat: ["ui"],
+  },
+  {
+    title: "Photoshop",
+    icon: "icon_ps.svg",
+    featured: false,
+    cat: ["ui"],
+  },
+  {
+    title: "Premier Pro",
+    icon: "icon_prem.svg",
+    featured: false,
+    cat: ["ui"],
+  },
 ];
 
 export const TESTIMONIALS = [
