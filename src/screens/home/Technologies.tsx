@@ -14,6 +14,7 @@ import Link from "next/link";
 
 import { useLottie } from "lottie-react";
 import ArrowRightPrimary from "@/public/assets/images/lottie/arrow-right-primary.json";
+import NextButton from "@/src/components/utils/buttons/NextButton";
 
 const FEATURED_TECH_LIST = TECH_LIST.filter((item) => item.featured);
 
@@ -67,18 +68,7 @@ export default function TechnologiesSection() {
             )}
           </ul>
 
-          <DivFadeUp>
-            <Link
-              href="/about"
-              className="text-primary font-semibold hover:brightness-110 duration-200 ease-in-out"
-              onMouseOver={() => setHoverState(true)}
-              onMouseLeave={() => setHoverState(false)}
-            >
-              <span className="flex gap-2 items-center justify-center">
-                Steal the entire stack <span>{arrow}</span>
-              </span>
-            </Link>
-          </DivFadeUp>
+          <NextButton text="Steal the entire stack" delay={8} link="/about" />
         </DarkCard>
       </SectionContentCard>
     </SectionContainer>

@@ -13,6 +13,7 @@ import SectionContainer from "@/src/components/sections/SectionContainer";
 import SectionContentCard from "@/src/components/sections/SectionContentCard";
 import GlowBlur from "@/src/components/sections/GlowBlur";
 import MainHeader from "@/src/components/utils/headers/MainHeader";
+import NextButton from "@/src/components/utils/buttons/NextButton";
 
 type ProjectType = {
   name: "Mademoiselle Angel" | "PassSafe" | "Project Econs";
@@ -50,18 +51,7 @@ export default function ProjectSection() {
           <ProjectCard name="PassSafe" />
           <ProjectCard name="Project Econs" />
         </div>
-        <DivFadeUp>
-          <Link
-            href="/portfolio"
-            className="text-primary font-semibold hover:brightness-110 duration-200 ease-in-out"
-            onMouseOver={() => setHoverState(true)}
-            onMouseLeave={() => setHoverState(false)}
-          >
-            <span className="flex gap-2 items-center justify-center">
-              Peep at my other works<span>{arrow}</span>
-            </span>
-          </Link>
-        </DivFadeUp>
+        <NextButton text="Peep at my other work" delay={8} link="/portfolio" />
       </SectionContentCard>
     </SectionContainer>
   );
