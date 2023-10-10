@@ -4,6 +4,7 @@ import Developing from "@/src/screens/Developing";
 import { ThemeContextProvider } from "@/src/contexts/ThemeContext";
 import Navbar from "@/src/components/navigation/Navbar";
 import Footer from "@/src/components/navigation/Footer";
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: {
@@ -28,6 +29,7 @@ export default function RootLayout({
           <Developing />
         ) : (
           <body>
+            <Toaster richColors position="top-center" />
             <Navbar />
             {children}
             <Footer />
