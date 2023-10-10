@@ -234,7 +234,7 @@ export const AWARDS = [
   {
     name: "Canadian Computing Competition",
     date: "February 2022",
-    desc: "Distinction in junior category",
+    desc: "Distinction in Junior category",
     awarded_by: "University of Waterloo",
   },
 ];
