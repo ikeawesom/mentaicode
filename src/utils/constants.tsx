@@ -205,7 +205,8 @@ export const EDUCATION = [
     name: "Anglo-Chinese Junior College",
     start_year: 2021,
     end_year: 2022,
-    achievements: "Technological Council EXCO: Project Manager",
+    achievements:
+      "Technological Council Executive Committee and Project Manager",
     res: "Distinctions in Computing and Mathematics",
   },
   {
