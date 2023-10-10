@@ -113,7 +113,7 @@ export const TECH_LIST = [
     cat: ["ui"],
   },
   {
-    title: "Premier Pro",
+    title: "Premier",
     icon: "icon_prem.svg",
     featured: false,
     cat: ["ui"],
