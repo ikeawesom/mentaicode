@@ -10,7 +10,7 @@ import DarkCard from "@/src/components/utils/cards/DarkCard";
 
 export default function EducationSection() {
   return (
-    <SectionContainer>
+    <SectionContainer className="py-10">
       <SectionContentCard>
         <GlowBlur headerType="header-2" />
         <DivFadeUp className="flex flex-col gap-3 items-center justify-center">
@@ -18,20 +18,23 @@ export default function EducationSection() {
             Education
           </MainHeader>
         </DivFadeUp>
-        <ul className="flex flex-col gap-10 items-center justify-center w-full">
+        <ul className="flex flex-col gap-8 items-center justify-center w-full">
           {EDUCATION.map((item, index) => (
             <li key={index} className="w-full">
               <DivFadeUp>
-                <DarkCard className="w-full flex flex-col gap-2 min-[330px]:items-start items-center justify-center">
+                <DarkCard
+                  force={true}
+                  className="w-full flex flex-col gap-2 min-[330px]:items-start items-center justify-center"
+                >
                   <div className="flex flex-col gap-1 min-[330px]:items-start items-center justify-center min-[330px]:text-start text-center">
                     <h1 className="dark:text-slate-50 text-slate-800 sm:text-3xl text-xl">
                       {item.name}
                     </h1>
-                    <p className="text-dark-grey dark:text-light-grey sm:text-base text-sm">
+                    <p className="text-dark-grey dark:text-light-grey sm:text-base text-sm italic">
                       {item.start_year} - {item.end_year}
                     </p>
                   </div>
-                  <div className="lex flex-col gap-2 min-[330px]:items-start items-center justify-center text-custom-white min-[330px]:text-start text-center">
+                  <div className="lex flex-col gap-2 min-[330px]:items-start items-center justify-center text-custom-black dark:text-custom-white min-[330px]:text-start text-center">
                     <h4 className="sm:text-lg text-base">
                       {item.achievements}
                     </h4>
