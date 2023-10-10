@@ -38,7 +38,7 @@ export default function NextButton({
       >
         <span
           className={twMerge(
-            "flex gap-2 items-center justify-center",
+            "flex gap-2 items-center justify-center text-center",
             textStyle
           )}
         >

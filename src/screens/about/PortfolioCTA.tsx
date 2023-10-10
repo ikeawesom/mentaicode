@@ -11,7 +11,7 @@ export default function PortfolioCTA() {
         Want to find out more?
       </ParaFadeUp>
       <NextButton
-        text="Take a look at what I've created."
+        text="View my work"
         delay={2}
         link="/portfolio"
         textStyle="text-xl"
