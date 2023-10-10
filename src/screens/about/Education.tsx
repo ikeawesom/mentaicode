@@ -11,7 +11,7 @@ import DarkCard from "@/src/components/utils/cards/DarkCard";
 export default function EducationSection() {
   return (
     <SectionContainer className="py-10">
-      <SectionContentCard>
+      <SectionContentCard className="w-full">
         <GlowBlur headerType="header-2" />
         <DivFadeUp className="flex flex-col gap-3 items-center justify-center">
           <MainHeader headerDark="header-2" headerLight="header-2">

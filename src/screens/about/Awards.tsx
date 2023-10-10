@@ -10,15 +10,15 @@ import React from "react";
 
 export default function AwardsSection() {
   return (
-    <SectionContainer>
-      <SectionContentCard>
+    <SectionContainer className="py-8">
+      <SectionContentCard className="w-full">
         <GlowBlur headerType="header-3" />
         <DivFadeUp className="flex flex-col gap-3 items-center justify-center">
           <MainHeader headerDark="header-3" headerLight="header-3">
             Awards
           </MainHeader>
         </DivFadeUp>
-        <ul className="flex flex-col gap-10 items-center justify-center w-full">
+        <ul className="flex flex-col gap-8 items-center justify-center w-full">
           {AWARDS.map((item, index) => (
             <li key={index} className="w-full">
               <DivFadeUp>
