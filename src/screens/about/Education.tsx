@@ -27,7 +27,7 @@ export default function EducationSection() {
                   className="w-full flex flex-col gap-2 min-[330px]:items-start items-center justify-center"
                 >
                   <div className="flex flex-col gap-1 min-[330px]:items-start items-center justify-center min-[330px]:text-start text-center">
-                    <h1 className="dark:text-slate-50 text-slate-800 sm:text-3xl text-xl">
+                    <h1 className="text-primary sm:text-3xl text-xl">
                       {item.name}
                     </h1>
                     <p className="text-dark-grey dark:text-light-grey sm:text-base text-sm italic">
