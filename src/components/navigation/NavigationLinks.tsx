@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { SunIcon, MoonIcon, CrossIcon } from "@/src/components/ThemeIcons";
 import { NAVIGATION_LINKS } from "@/src/utils/constants";
 import "@/app/globals.css";
+import { toast } from "sonner";
 
 type NavLinksProps = {
   navVisible: boolean;
@@ -43,6 +44,13 @@ export default function NavigationLinks({
 
   const handleThemeChange = () => {
     setTheme(theme === "light" ? "dark" : "light");
+    if (theme === "dark")
+      toast(
+        <div className="flex flex-col gap-2">
+          <h1 className="text-sm">Looking for a better experience?</h1>
+          <p className="text-xs">Go back to dark mode!</p>
+        </div>
+      );
   };
 
   useEffect(() => {
