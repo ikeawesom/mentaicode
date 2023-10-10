@@ -11,7 +11,7 @@ import { LightCheck } from "@/src/contexts/ThemeContext";
 
 export default function Stack() {
   return (
-    <SectionContainer className="min-[420px]:py-10 py-0 flex flex-col gap-10">
+    <SectionContainer className="min-[420px]:py-10 py-0 flex flex-col gap-10 pb-20">
       <DivFadeUp className="flex flex-col gap-3 items-center justify-center">
         <MainHeader headerDark="header-1" headerLight="header-1">
           My Stack
