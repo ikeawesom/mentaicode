@@ -16,7 +16,7 @@ import MainHeader from "@/src/components/utils/headers/MainHeader";
 import NextButton from "@/src/components/utils/buttons/NextButton";
 
 type ProjectType = {
-  name: "Mademoiselle Angel" | "PassSafe" | "Project Econs";
+  name: "Mademoiselle Angel" | "PassSafe" | "Project Econs" | "Social40";
 };
 
 export default function ProjectSection() {
@@ -47,6 +47,7 @@ export default function ProjectSection() {
           </ParaFadeUp>
         </DivFadeUp>
         <div className="flex-col flex min-[440px]:gap-52 gap-20 justify-center items-center">
+          <ProjectCard name="Social40" />
           <ProjectCard name="Mademoiselle Angel" />
           <ProjectCard name="PassSafe" />
           <ProjectCard name="Project Econs" />
@@ -94,7 +95,7 @@ export function ProjectCard({ name }: ProjectType) {
             text=""
             className={`w-fit ${buttonColor} text-custom-white min-[500px]:text-lg text-base max-[440px]:px-4`}
           >
-            View Case Study
+            Discover More
           </PrimaryButton>
         </div>
       </DarkCard>

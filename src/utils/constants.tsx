@@ -138,6 +138,16 @@ export const TESTIMONIALS = [
 ];
 
 export const PROJECTS = {
+  Social40: {
+    landing: "social40/landing_social.svg",
+    landingDesc:
+      "Customised social ERP platform, tailored for the Army's needs.",
+    link: "/portfolio/social40",
+    colors: {
+      accent: "bg-[#E87B34]",
+      background: "min-[350px]:dark:to-[#291000] min-[350px]:to-[#FFCFB0]",
+    },
+  },
   "Mademoiselle Angel": {
     landing: "mademoiselle-angel/landing_angel.svg",
     landingDesc: "Full Stack E-Commerce platform for a family business.",
@@ -166,6 +176,16 @@ export const PROJECTS = {
       background: "min-[350px]:to-[#a2ffc3] min-[350px]:dark:to-[#00551e]",
     },
   },
+} as {
+  [id: string]: {
+    landing: string;
+    landingDesc: string;
+    link: string;
+    colors: {
+      accent: string;
+      background: string;
+    };
+  };
 };
 
 export const SOCIALS_LINKS = [
